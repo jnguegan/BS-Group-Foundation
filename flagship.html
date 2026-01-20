@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Flagship Project – BS Group Foundation</title>
+  <meta name="description" content="Flagship School Infrastructure Completion Project in Adamaoua Region, Cameroon. Primary operational, secondary in authorization phase. Vocational training and sport facilities under development." />
+
+  <link rel="icon" href="favicon.png" type="image/png" />
+
+  <meta property="og:title" content="Flagship Project – BS Group Foundation" />
+  <meta property="og:description" content="School Infrastructure Completion – Adamaoua, Cameroon. Education, vocational skills and sport development." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="logo.png" />
+
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#0b1b33;
+      --muted:#5b6b86;
+      --card:#f7f9fc;
+      --line:#e6ecf5;
+      --shadow: 0 14px 34px rgba(16, 40, 80, .10);
+      --radius:18px;
+
+      --brand:#0b4ea2;
+      --brand2:#19a65b;
+      --soft:#eef5ff;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      background: radial-gradient(900px 600px at 15% 0%, rgba(11,78,162,.10), transparent 55%),
+                  radial-gradient(900px 600px at 85% 0%, rgba(25,166,91,.10), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:inherit; text-decoration:none}
+    .container{max-width:1120px; margin:0 auto; padding:0 18px}
+
+    /* Buttons */
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:10px; padding:12px 16px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:#fff;
+      color:var(--text);
+      font-weight:800;
+      transition:.2s transform, .2s box-shadow, .2s border-color;
+      cursor:pointer;
+      box-shadow: 0 8px 16px rgba(16, 40, 80, .06);
+    }
+    .btn:hover{transform:translateY(-1px); border-color:#d6e1f2; box-shadow: 0 14px 22px rgba(16, 40, 80, .10)}
+    .btn.primary{
+      border:none;
+      background: linear-gradient(135deg, var(--brand), #2a6ed0);
+      color:#fff;
+    }
+    .btn.green{
+      border:none;
+      background: linear-gradient(135deg, var(--brand2), #43c37a);
+      color:#fff;
+    }
+    .btn.ghost{background: rgba(255,255,255,.75);}
+
+    /* Nav */
+    .nav{
+      position:sticky; top:0; z-index:50;
+      background: rgba(255,255,255,.86);
+      backdrop-filter: blur(12px);
+      border-bottom:1px solid var(--line);
+    }
+    .nav-inner{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:12px 0;
+      gap:14px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px;
+      min-width: 240px;
+    }
+    .brand img{height:52px; width:auto; border-radius:12px; background:#fff;}
+    .brand .name{font-weight:950; letter-spacing:.2px; color:var(--brand);}
+    .brand .tag{font-size:12px; color:var(--muted); margin-top:2px;}
+
+    .menu{
+      display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+      justify-content:center;
+    }
+    .menu a{
+      font-size:14px;
+      color:rgba(11,27,51,.92);
+      padding:10px 10px;
+      border-radius:12px;
+      transition:.2s background;
+      white-space:nowrap;
+    }
+    .menu a:hover{background:var(--soft)}
+    .nav-cta{display:flex; align-items:center; gap:10px}
+    .hamburger{display:none}
+
+    /* Hero */
+    header.hero{padding:42px 0 22px;}
+    .hero-card{
+      background: rgba(255,255,255,.90);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:22px;
+      box-shadow:var(--shadow);
+    }
+    .badge{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background: #fff;
+      color:var(--muted);
+      font-size:13px;
+    }
+    h1{
+      margin:12px 0 10px;
+      font-size:38px;
+      line-height:1.10;
+      letter-spacing:-.6px;
+      color:#07162d;
+    }
+    .lead{margin:0; color: rgba(11,27,51,.82); font-size:16px; max-width:78ch;}
+    .hero-actions{display:flex; gap:10px; flex-wrap:wrap; margin-top:16px}
+
+    /* Sections */
+    section{padding:28px 0}
+    h2{margin:0 0 12px; font-size:26px; color:#07162d}
+    h3{margin:18px 0 8px; font-size:18px; color:#07162d}
+    p{margin:0 0 10px}
+    .small{color:var(--muted); font-size:13px}
+
+    .grid{display:grid; gap:14px}
+    .grid.cols-2{grid-template-columns:repeat(2, 1fr)}
+    .grid.cols-3{grid-template-columns:repeat(3, 1fr)}
+
+    .card{
+      background: var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:18px;
+    }
+    .card ul{margin:10px 0 0; padding-left:18px; color:rgba(11,27,51,.82)}
+    .card li{margin:6px 0}
+
+    /* Gallery */
+    .gallery{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap:14px;
+      margin-top:10px;
+    }
+    .photo{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      overflow:hidden;
+      box-shadow: 0 10px 18px rgba(16, 40, 80, .06);
+    }
+    .photo img{width:100%; height:auto; display:block}
+    .photo .cap{padding:12px 12px; color:rgba(11,27,51,.82); font-size:13px}
+
+    /* Footer */
+    .footer{
+      padding:26px 0 36px;
+      border-top:1px solid var(--line);
+      color:rgba(11,27,51,.82);
+      background: #fff;
+      margin-top:20px;
+    }
+
+    @media (max-width: 980px){
+      .grid.cols-2{grid-template-columns:1fr}
+      .grid.cols-3{grid-template-columns:1fr}
+      .menu{display:none}
+      .hamburger{display:inline-flex}
+      .mobile-menu{display:none; padding:10px 0 14px; border-top:1px solid var(--line);}
+      .mobile-menu a{display:block; padding:12px 8px; border-radius:12px;}
+      .mobile-menu a:hover{background:var(--soft)}
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAV -->
+  <div class="nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a class="brand" href="index.html" aria-label="BS Group Foundation home">
+          <img src="logo.png" alt="BS Group Foundation Logo" />
+          <div>
+            <div class="name">BS Group Foundation</div>
+            <div class="tag">Education • Sport • Health • Skills • Opportunity</div>
+          </div>
+        </a>
+
+        <!-- You can edit these to match your index menu exactly -->
+        <nav class="menu" aria-label="Main navigation">
+          <a href="index.html#about">About</a>
+          <a href="index.html#impact">Impact Areas</a>
+          <a href="index.html#programs">Programs</a>
+          <a href="index.html#sponsor-child">Sponsor a Child</a>
+          <a href="index.html#sponsor-school">Sponsor a School</a>
+          <a href="flagship.html">Flagship Project</a>
+          <a href="index.html#events">Events</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+
+        <div class="nav-cta">
+          <a class="btn ghost" href="index.html#sponsorship">Get Involved</a>
+          <a class="btn primary" href="index.html#donate">Donate</a>
+          <button class="btn hamburger" id="hamburger" type="button" aria-label="Open menu">Menu</button>
+        </div>
+      </div>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="
