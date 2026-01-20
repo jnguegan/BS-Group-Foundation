@@ -5,14 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Flagship Project – BS Group Foundation</title>
-  <meta name="description" content="Flagship School Infrastructure Completion Project in Adamaoua Region, Cameroon. Primary operational, secondary in authorization phase. Vocational training and sport facilities under development." />
+  <meta name="description" content="Flagship School Infrastructure Completion Project in Adamaoua Region, Cameroon. Primary operational; Secondary in authorization phase." />
 
   <link rel="icon" href="favicon.png" type="image/png" />
-
-  <meta property="og:title" content="Flagship Project – BS Group Foundation" />
-  <meta property="og:description" content="School Infrastructure Completion – Adamaoua, Cameroon. Education, vocational skills and sport development." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="logo.png" />
+  <meta name="theme-color" content="#ffffff" />
 
   <style>
     :root{
@@ -23,27 +19,24 @@
       --line:#e6ecf5;
       --shadow: 0 14px 34px rgba(16, 40, 80, .10);
       --radius:18px;
-
       --brand:#0b4ea2;
       --brand2:#19a65b;
       --soft:#eef5ff;
     }
-
     *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
     body{
       margin:0;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-      background: radial-gradient(900px 600px at 15% 0%, rgba(11,78,162,.10), transparent 55%),
-                  radial-gradient(900px 600px at 85% 0%, rgba(25,166,91,.10), transparent 55%),
-                  var(--bg);
+      background:
+        radial-gradient(900px 600px at 15% 0%, rgba(11,78,162,.10), transparent 55%),
+        radial-gradient(900px 600px at 85% 0%, rgba(25,166,91,.10), transparent 55%),
+        var(--bg);
       color:var(--text);
       line-height:1.55;
     }
     a{color:inherit; text-decoration:none}
     .container{max-width:1120px; margin:0 auto; padding:0 18px}
 
-    /* Buttons */
     .btn{
       display:inline-flex; align-items:center; justify-content:center;
       gap:10px; padding:12px 16px;
@@ -53,23 +46,13 @@
       color:var(--text);
       font-weight:800;
       transition:.2s transform, .2s box-shadow, .2s border-color;
-      cursor:pointer;
       box-shadow: 0 8px 16px rgba(16, 40, 80, .06);
     }
     .btn:hover{transform:translateY(-1px); border-color:#d6e1f2; box-shadow: 0 14px 22px rgba(16, 40, 80, .10)}
-    .btn.primary{
-      border:none;
-      background: linear-gradient(135deg, var(--brand), #2a6ed0);
-      color:#fff;
-    }
-    .btn.green{
-      border:none;
-      background: linear-gradient(135deg, var(--brand2), #43c37a);
-      color:#fff;
-    }
+    .btn.primary{border:none; background: linear-gradient(135deg, var(--brand), #2a6ed0); color:#fff;}
+    .btn.green{border:none; background: linear-gradient(135deg, var(--brand2), #43c37a); color:#fff;}
     .btn.ghost{background: rgba(255,255,255,.75);}
 
-    /* Nav */
     .nav{
       position:sticky; top:0; z-index:50;
       background: rgba(255,255,255,.86);
@@ -95,18 +78,16 @@
     }
     .menu a{
       font-size:14px;
-      color:rgba(11,27,51,.92);
       padding:10px 10px;
       border-radius:12px;
       transition:.2s background;
       white-space:nowrap;
+      color:rgba(11,27,51,.92);
     }
     .menu a:hover{background:var(--soft)}
     .nav-cta{display:flex; align-items:center; gap:10px}
-    .hamburger{display:none}
 
-    /* Hero */
-    header.hero{padding:42px 0 22px;}
+    header.hero{padding:42px 0 18px;}
     .hero-card{
       background: rgba(255,255,255,.90);
       border:1px solid var(--line);
@@ -123,18 +104,11 @@
       color:var(--muted);
       font-size:13px;
     }
-    h1{
-      margin:12px 0 10px;
-      font-size:38px;
-      line-height:1.10;
-      letter-spacing:-.6px;
-      color:#07162d;
-    }
+    h1{margin:12px 0 10px; font-size:38px; line-height:1.10; letter-spacing:-.6px; color:#07162d;}
     .lead{margin:0; color: rgba(11,27,51,.82); font-size:16px; max-width:78ch;}
     .hero-actions{display:flex; gap:10px; flex-wrap:wrap; margin-top:16px}
 
-    /* Sections */
-    section{padding:28px 0}
+    section{padding:22px 0}
     h2{margin:0 0 12px; font-size:26px; color:#07162d}
     h3{margin:18px 0 8px; font-size:18px; color:#07162d}
     p{margin:0 0 10px}
@@ -143,7 +117,6 @@
     .grid{display:grid; gap:14px}
     .grid.cols-2{grid-template-columns:repeat(2, 1fr)}
     .grid.cols-3{grid-template-columns:repeat(3, 1fr)}
-
     .card{
       background: var(--card);
       border:1px solid var(--line);
@@ -153,50 +126,38 @@
     .card ul{margin:10px 0 0; padding-left:18px; color:rgba(11,27,51,.82)}
     .card li{margin:6px 0}
 
-    /* Gallery */
-    .gallery{
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap:14px;
-      margin-top:10px;
-    }
-    .photo{
-      background:#fff;
-      border:1px solid var(--line);
+    .cta{
+      margin-top:16px;
+      padding:18px;
       border-radius:var(--radius);
-      overflow:hidden;
-      box-shadow: 0 10px 18px rgba(16, 40, 80, .06);
-    }
-    .photo img{width:100%; height:auto; display:block}
-    .photo .cap{padding:12px 12px; color:rgba(11,27,51,.82); font-size:13px}
-
-    /* Footer */
-    .footer{
-      padding:26px 0 36px;
-      border-top:1px solid var(--line);
-      color:rgba(11,27,51,.82);
+      border:1px solid var(--line);
       background: #fff;
-      margin-top:20px;
+      box-shadow: 0 10px 18px rgba(16, 40, 80, .06);
+      display:flex; align-items:center; justify-content:space-between;
+      gap:12px; flex-wrap:wrap;
+    }
+
+    .footer{
+      padding:22px 0 34px;
+      border-top:1px solid var(--line);
+      background:#fff;
+      margin-top:18px;
     }
 
     @media (max-width: 980px){
       .grid.cols-2{grid-template-columns:1fr}
       .grid.cols-3{grid-template-columns:1fr}
       .menu{display:none}
-      .hamburger{display:inline-flex}
-      .mobile-menu{display:none; padding:10px 0 14px; border-top:1px solid var(--line);}
-      .mobile-menu a{display:block; padding:12px 8px; border-radius:12px;}
-      .mobile-menu a:hover{background:var(--soft)}
     }
   </style>
 </head>
 
 <body>
-  <!-- NAV -->
+
   <div class="nav">
     <div class="container">
       <div class="nav-inner">
-        <a class="brand" href="index.html" aria-label="BS Group Foundation home">
+        <a class="brand" href="index.html">
           <img src="logo.png" alt="BS Group Foundation Logo" />
           <div>
             <div class="name">BS Group Foundation</div>
@@ -204,7 +165,6 @@
           </div>
         </a>
 
-        <!-- You can edit these to match your index menu exactly -->
         <nav class="menu" aria-label="Main navigation">
           <a href="index.html#about">About</a>
           <a href="index.html#impact">Impact Areas</a>
@@ -217,11 +177,127 @@
         </nav>
 
         <div class="nav-cta">
-          <a class="btn ghost" href="index.html#sponsorship">Get Involved</a>
+          <a class="btn ghost" href="index.html#get-involved">Get Involved</a>
           <a class="btn primary" href="index.html#donate">Donate</a>
-          <button class="btn hamburger" id="hamburger" type="button" aria-label="Open menu">Menu</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header class="hero">
+    <div class="container">
+      <div class="hero-card">
+        <div class="badge">🇨🇲 Cameroon • Adamaoua Region • Primary & Secondary School</div>
+        <h1>Flagship Project: School Infrastructure Completion</h1>
+        <p class="lead">
+          BS Group Foundation is supporting the completion of a Primary and Secondary Community School campus in the Adamaoua Region of Cameroon, integrating education, vocational skills and sport development.
+        </p>
+        <div class="hero-actions">
+          <a class="btn green" href="index.html#sponsor-school">Sponsor a School</a>
+          <a class="btn primary" href="index.html#donate">Donate</a>
+          <a class="btn" href="index.html#contact">Contact</a>
+        </div>
+        <p class="small" style="margin-top:10px;">
+          Primary School is operational. Secondary School infrastructure is in place and currently in the final administrative and authorization phase before opening.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section>
+      <h2>Project Location & Institutional Status</h2>
+      <p>
+        This project is implemented in partnership with an established <strong>Primary and Secondary Community School</strong> located in the <strong>Adamaoua Region, Cameroon</strong>.
+      </p>
+      <p>
+        The school currently operates as a fully authorized <strong>Primary School</strong>. The <strong>Secondary School</strong> is under development and is not yet operational due to ongoing administrative paperwork and authorization requirements.
+      </p>
+    </section>
+
+    <section>
+      <h2>What We Are Building</h2>
+      <div class="grid cols-3">
+        <div class="card">
+          <h3>Multi-sport Training Ground</h3>
+          <ul>
+            <li>Football, basketball, volleyball</li>
+            <li>Athletics & fitness</li>
+            <li>Safety fencing and basic lighting</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Skills & Employability Workshops</h3>
+          <ul>
+            <li>Carpentry</li>
+            <li>Mechanics</li>
+            <li>Plumbing</li>
+            <li>Electrical installation</li>
+            <li>Computer & digital skills</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Support Facilities</h3>
+          <ul>
+            <li>Instructor rooms & training spaces</li>
+            <li>Tools storage & utilities</li>
+            <li>Monitoring & reporting</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Who This Project Serves</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <h3>Direct beneficiaries</h3>
+          <ul>
+            <li>300–600 students per year</li>
+            <li>Children and youth from vulnerable backgrounds</li>
+            <li>Young women entering technical training</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Long-term outcomes</h3>
+          <ul>
+            <li>Expanded access to secondary education</li>
+            <li>Employability and entrepreneurship pathways</li>
+            <li>Reduced dropout rates and youth unemployment</li>
+          </ul>
         </div>
       </div>
 
-      <div class="mobile-menu" id="mobileMenu">
-        <a href="
+      <div class="cta">
+        <div>
+          <strong>Want to support this flagship project?</strong><br />
+          <span class="small">Partner with us, sponsor a component, or fund a priority need.</span>
+        </div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn" href="index.html#get-involved">Become a Partner</a>
+          <a class="btn primary" href="index.html#donate">Donate</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Project Photos</h2>
+      <p class="small">
+        Photo gallery will appear here once images are uploaded to GitHub in the <strong>images</strong> folder.
+      </p>
+      <!-- When images are ready, we will replace this section with a real gallery -->
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div style="display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap;">
+        <div>
+          <strong>BS Group Foundation</strong><br />
+          <span class="small">Education • Sport • Health • Skills • Opportunity</span>
+        </div>
+        <div class="small">
+          <a href="index.html#contact">Contact</a> •
+          <a href
