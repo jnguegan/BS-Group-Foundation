@@ -1,0 +1,1040 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>BS Group Foundation</title>
+  <meta name="description" content="BS Group Foundation empowers children and communities through education, sport, health, skills development, women empowerment and entrepreneurship programs across Africa and emerging regions." />
+
+  <!-- FAVICON (root folder) -->
+  <link rel="icon" href="favicon.png" type="image/png" />
+
+  <!-- Social preview -->
+  <meta property="og:title" content="BS Group Foundation" />
+  <meta property="og:description" content="Empowering children and communities through education, sport, health, skills and opportunity. Sponsor a child. Sponsor a school. Build futures." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="logo.png" />
+
+  <meta name="theme-color" content="#ffffff" />
+
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#0b1b33;
+      --muted:#5b6b86;
+      --card:#f7f9fc;
+      --line:#e6ecf5;
+      --shadow: 0 14px 34px rgba(16, 40, 80, .10);
+      --radius:18px;
+
+      --brand:#0b4ea2;      /* deep blue */
+      --brand2:#19a65b;     /* green */
+      --accent:#ffb020;     /* warm accent */
+      --soft:#eef5ff;       /* soft blue */
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      background: radial-gradient(900px 600px at 15% 0%, rgba(11,78,162,.10), transparent 55%),
+                  radial-gradient(900px 600px at 85% 0%, rgba(25,166,91,.10), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:inherit; text-decoration:none}
+    .container{max-width:1120px; margin:0 auto; padding:0 18px}
+
+    /* Buttons */
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:10px; padding:12px 16px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:#fff;
+      color:var(--text);
+      font-weight:700;
+      transition:.2s transform, .2s box-shadow, .2s border-color;
+      cursor:pointer;
+      box-shadow: 0 8px 16px rgba(16, 40, 80, .06);
+    }
+    .btn:hover{transform:translateY(-1px); border-color:#d6e1f2; box-shadow: 0 14px 22px rgba(16, 40, 80, .10)}
+    .btn.primary{
+      border:none;
+      background: linear-gradient(135deg, var(--brand), #2a6ed0);
+      color:#fff;
+    }
+    .btn.primary:hover{box-shadow: 0 16px 28px rgba(11,78,162,.22)}
+    .btn.green{
+      border:none;
+      background: linear-gradient(135deg, var(--brand2), #43c37a);
+      color:#fff;
+    }
+    .btn.ghost{
+      background: rgba(255,255,255,.75);
+    }
+
+    /* Top navigation */
+    .nav{
+      position:sticky; top:0; z-index:50;
+      background: rgba(255,255,255,.86);
+      backdrop-filter: blur(12px);
+      border-bottom:1px solid var(--line);
+    }
+    .nav-inner{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:12px 0;
+      gap:14px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px;
+      min-width: 240px;
+    }
+    .brand img{
+      height:52px; width:auto;
+      border-radius:12px;
+      background:#fff;
+    }
+    .brand .name{
+      font-weight:900;
+      letter-spacing:.2px;
+      color:var(--brand);
+    }
+    .brand .tag{
+      font-size:12px;
+      color:var(--muted);
+      margin-top:2px;
+    }
+    .menu{
+      display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+      justify-content:center;
+    }
+    .menu a{
+      font-size:14px;
+      color:rgba(11,27,51,.92);
+      padding:10px 10px;
+      border-radius:12px;
+      transition:.2s background;
+      white-space:nowrap;
+    }
+    .menu a:hover{background:var(--soft)}
+    .nav-cta{display:flex; align-items:center; gap:10px}
+
+    .hamburger{display:none}
+
+    /* Hero */
+    header.hero{
+      padding:58px 0 22px;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap:16px;
+      align-items:stretch;
+    }
+    .hero-card{
+      background: rgba(255,255,255,.88);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:22px;
+      box-shadow:var(--shadow);
+    }
+    .badge{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background: #fff;
+      color:var(--muted);
+      font-size:13px;
+    }
+    h1{
+      margin:12px 0 10px;
+      font-size:42px;
+      line-height:1.08;
+      letter-spacing:-.6px;
+      color:#07162d;
+    }
+    .lead{
+      margin:0;
+      color: rgba(11,27,51,.82);
+      font-size:16px;
+      max-width:64ch;
+    }
+    .hero-actions{display:flex; gap:10px; flex-wrap:wrap; margin-top:16px}
+    .stats{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:12px;
+      margin-top:16px;
+    }
+    .stat{
+      padding:14px;
+      border-radius:16px;
+      border:1px solid var(--line);
+      background: #fff;
+    }
+    .stat b{display:block; font-size:16px; color:#07162d}
+    .stat span{color:var(--muted); font-size:13px}
+
+    .kicker{
+      color: var(--brand);
+      font-weight:900;
+      letter-spacing:.4px;
+      font-size:12px;
+      text-transform:uppercase;
+    }
+
+    /* Sections */
+    section{padding:42px 0}
+    .section-title{
+      display:flex; align-items:flex-end; justify-content:space-between;
+      gap:14px;
+      margin-bottom:16px;
+    }
+    .section-title h2{
+      margin:0;
+      font-size:26px;
+      letter-spacing:-.3px;
+      color:#07162d;
+    }
+    .section-title p{
+      margin:0;
+      color:var(--muted);
+      max-width:78ch;
+    }
+
+    .grid{display:grid; gap:14px}
+    .grid.cols-3{grid-template-columns:repeat(3, 1fr)}
+    .grid.cols-2{grid-template-columns:repeat(2, 1fr)}
+
+    .card{
+      background: var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:18px;
+    }
+    .card h3{margin:0 0 8px; font-size:18px; color:#07162d}
+    .card p{margin:0; color:rgba(11,27,51,.82)}
+    .card ul{margin:10px 0 0; padding-left:18px; color:rgba(11,27,51,.82)}
+    .card li{margin:6px 0}
+
+    .split{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+      align-items:start;
+    }
+
+    /* Pricing blocks */
+    .pricing{
+      display:grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap:14px;
+      margin-top:10px;
+    }
+    .price{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:16px;
+      box-shadow: 0 10px 18px rgba(16, 40, 80, .06);
+    }
+    .price.featured{
+      border-color: rgba(11,78,162,.35);
+      box-shadow: 0 14px 26px rgba(11,78,162,.12);
+    }
+    .price b{color:#07162d}
+    .amount{font-size:28px; font-weight:950; margin:6px 0; color:var(--brand)}
+    .per{color:var(--muted); font-size:13px}
+    .price ul{margin:12px 0 0; padding-left:18px; color:rgba(11,27,51,.82)}
+    .price .action{margin-top:14px}
+
+    /* Forms */
+    form{display:grid; gap:10px; margin-top:8px}
+    label{font-size:13px; color:rgba(11,27,51,.92); font-weight:650}
+    input, select, textarea{
+      width:100%;
+      padding:12px 12px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background:#fff;
+      color:var(--text);
+      outline:none;
+    }
+    textarea{min-height:120px; resize:vertical}
+    input::placeholder, textarea::placeholder{color:rgba(91,107,134,.75)}
+    .form-row{display:grid; grid-template-columns:1fr 1fr; gap:10px}
+
+    /* Footer */
+    .footer{
+      padding:26px 0 36px;
+      border-top:1px solid var(--line);
+      color:rgba(11,27,51,.82);
+      background: #fff;
+    }
+    .footer-grid{
+      display:grid;
+      grid-template-columns: 1.3fr 1fr 1fr;
+      gap:14px;
+    }
+    .small{color:var(--muted); font-size:13px}
+    .links a{display:block; padding:8px 0; color:rgba(11,27,51,.9)}
+    .links a:hover{text-decoration:underline}
+    .hr{height:1px; background:var(--line); margin:14px 0}
+
+    /* Mobile */
+    @media (max-width: 980px){
+      .hero-grid{grid-template-columns:1fr}
+      .grid.cols-3{grid-template-columns:1fr}
+      .grid.cols-2{grid-template-columns:1fr}
+      .split{grid-template-columns:1fr}
+      .form-row{grid-template-columns:1fr}
+      .menu{display:none}
+      .hamburger{display:inline-flex}
+      .mobile-menu{
+        display:none;
+        padding:10px 0 14px;
+        border-top:1px solid var(--line);
+      }
+      .mobile-menu a{
+        display:block;
+        padding:12px 8px;
+        border-radius:12px;
+      }
+      .mobile-menu a:hover{background:var(--soft)}
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAV -->
+  <div class="nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a class="brand" href="#top" aria-label="BS Group Foundation home">
+          <img src="logo.png" alt="BS Group Foundation Logo" />
+          <div>
+            <div class="name">BS Group Foundation</div>
+            <div class="tag">Education • Sport • Health • Skills • Opportunity</div>
+          </div>
+        </a>
+
+        <nav class="menu" aria-label="Main navigation">
+          <a href="#about">About</a>
+          <a href="#impact">Impact Areas</a>
+          <a href="#programs">Programs</a>
+          <a href="#sponsor-child">Sponsor a Child</a>
+          <a href="#sponsor-school">Sponsor a School</a>
+          <a href="#flagship">Flagship Project</a>
+          <a href="#events">Events</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="nav-cta">
+          <a class="btn ghost" href="#sponsorship">Get Involved</a>
+          <a class="btn primary" href="#donate">Donate</a>
+          <button class="btn hamburger" id="hamburger" type="button" aria-label="Open menu">Menu</button>
+        </div>
+      </div>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="#about">About</a>
+        <a href="#impact">Impact Areas</a>
+        <a href="#programs">Programs</a>
+        <a href="#sponsor-child">Sponsor a Child</a>
+        <a href="#sponsor-school">Sponsor a School</a>
+        <a href="#flagship">Flagship Project</a>
+        <a href="#events">Events</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <header class="hero" id="top">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-card">
+          <span class="badge">🌍 Africa-focused programs • Transparent reporting • Sustainable impact</span>
+          <h1>Empowering Children & Communities Through Opportunity</h1>
+          <p class="lead">
+            BS Group Foundation supports vulnerable children, schools and communities through education access, sport development,
+            healthcare, vocational skills, women empowerment and entrepreneurship — creating sustainable pathways to dignity,
+            employment and long-term success.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn green" href="#sponsor-child">Sponsor a Child</a>
+            <a class="btn primary" href="#sponsor-school">Sponsor a School</a>
+            <a class="btn" href="#flagship">Support Flagship Project</a>
+          </div>
+
+          <div class="stats">
+            <div class="stat"><b>Education Access</b><span>Fees, materials, mentoring & school support</span></div>
+            <div class="stat"><b>Sport & Youth Development</b><span>Discipline, teamwork and opportunity</span></div>
+            <div class="stat"><b>Skills & Employability</b><span>Workshops for practical trades & digital skills</span></div>
+            <div class="stat"><b>Health & Wellbeing</b><span>Nutrition, hygiene and community care</span></div>
+          </div>
+
+          <p class="small" style="margin-top:14px;">
+            For corporate/institutional partnerships, visit <a href="#sponsorship" style="color:var(--brand); text-decoration:underline;">Get Involved</a>.
+          </p>
+        </div>
+
+        <aside class="hero-card">
+          <div class="kicker">Flagship Focus</div>
+          <h3 style="margin:8px 0 8px; color:#07162d;">School Infrastructure Completion (Africa)</h3>
+          <p style="margin:0; color:rgba(11,27,51,.82);">
+            We are supporting an existing partner school to complete critical infrastructure:
+          </p>
+
+          <div class="hr"></div>
+
+          <ul style="margin:0; padding-left:18px; color:rgba(11,27,51,.82);">
+            <li><b>Multi-sport training ground</b> (football, basketball, volleyball, athletics/fitness)</li>
+            <li><b>Workshops facility</b> for skills training</li>
+            <li>Carpentry • Mechanics • Plumbing • Electrical • Computer lab</li>
+          </ul>
+
+          <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+            <a class="btn primary" href="#flagship">View Project</a>
+            <a class="btn" href="#donate">Donate</a>
+          </div>
+
+          <p class="small" style="margin-top:12px;">
+            Sponsors receive progress updates, photos/videos, and clear reporting for funded components.
+          </p>
+        </aside>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="section-title">
+        <h2>About the Foundation</h2>
+        <p>
+          BS Group Foundation is dedicated to long-term community development by combining education, youth development,
+          health, skills training, women empowerment and entrepreneurship.
+        </p>
+      </div>
+
+      <div class="grid cols-3">
+        <div class="card">
+          <div class="kicker">Mission</div>
+          <h3>Opportunity & Dignity</h3>
+          <p>
+            To empower children, youth and communities by providing access to quality education, sport, healthcare,
+            vocational skills and entrepreneurship opportunities — enabling long-term social and economic development.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="kicker">Vision</div>
+          <h3>Sustainable Futures</h3>
+          <p>
+            Inclusive communities where every child and young person, regardless of background, can learn, grow, work and lead
+            with confidence, purpose and dignity.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="kicker">Values</div>
+          <h3>Integrity & Impact</h3>
+          <p>
+            Integrity, transparency, respect, inclusion and measurable outcomes guide all our programs and partnerships.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPACT AREAS -->
+  <section id="impact">
+    <div class="container">
+      <div class="section-title">
+        <h2>Impact Areas</h2>
+        <p>Our programs are designed to deliver measurable change for children, families and communities.</p>
+      </div>
+
+      <div class="grid cols-3">
+        <div class="card">
+          <h3>🎓 Education Access</h3>
+          <p>School sponsorships, infrastructure support, learning materials, scholarships and mentoring for vulnerable children.</p>
+        </div>
+
+        <div class="card">
+          <h3>⚽ Sport Development</h3>
+          <p>Youth sport programs, facilities, training camps and talent development for discipline and opportunity.</p>
+        </div>
+
+        <div class="card">
+          <h3>🏥 Health & Wellbeing</h3>
+          <p>Basic healthcare access, nutrition support, hygiene education and community health initiatives.</p>
+        </div>
+
+        <div class="card">
+          <h3>🛠 Skills & Employability</h3>
+          <p>Vocational training in carpentry, mechanics, plumbing, electrical engineering, digital skills and trades.</p>
+        </div>
+
+        <div class="card">
+          <h3>👩 Women Empowerment</h3>
+          <p>Programs that support women’s education, leadership, wellbeing and economic participation.</p>
+        </div>
+
+        <div class="card">
+          <h3>🚀 Entrepreneurship</h3>
+          <p>Micro-enterprise support, mentorship, practical training and community business development.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAMS -->
+  <section id="programs">
+    <div class="container">
+      <div class="section-title">
+        <h2>Programs</h2>
+        <p>Support children and communities directly — sponsor a child, sponsor a school, or fund flagship infrastructure components.</p>
+      </div>
+
+      <div class="grid cols-3">
+        <div class="card">
+          <div class="kicker">Program</div>
+          <h3>Sponsor a Child</h3>
+          <p>Support an orphaned or disadvantaged child in Africa with education, sport, nutrition and mentorship.</p>
+          <div style="margin-top:12px;"><a class="btn green" href="#sponsor-child">Learn more</a></div>
+        </div>
+
+        <div class="card">
+          <div class="kicker">Program</div>
+          <h3>Sponsor a School</h3>
+          <p>Transform a school through learning resources, facilities, and sustainable community development.</p>
+          <div style="margin-top:12px;"><a class="btn primary" href="#sponsor-school">Learn more</a></div>
+        </div>
+
+        <div class="card">
+          <div class="kicker">Project</div>
+          <h3>Flagship School Infrastructure</h3>
+          <p>Help complete a multi-sport ground and vocational workshops: carpentry, mechanics, plumbing, electrical & computer lab.</p>
+          <div style="margin-top:12px;"><a class="btn" href="#flagship">View project</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPONSOR A CHILD -->
+  <section id="sponsor-child">
+    <div class="container">
+      <div class="section-title">
+        <h2>Sponsor a Child</h2>
+        <p>Support an orphaned child or a child from a poor background — by funding education, protection, and development opportunities.</p>
+      </div>
+
+      <div class="split">
+        <div class="card">
+          <div class="kicker">What your support provides</div>
+          <h3>Direct child impact</h3>
+          <ul>
+            <li>School fees and registration</li>
+            <li>Uniforms and learning materials</li>
+            <li>Sports training and equipment</li>
+            <li>Nutrition support</li>
+            <li>Basic medical care</li>
+            <li>Mentorship & life-skills guidance</li>
+          </ul>
+          <p class="small" style="margin-top:10px;">
+            Sponsors receive progress updates and an annual impact summary (photos and reporting where available).
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="kicker">Sponsorship options</div>
+          <h3>Choose a level</h3>
+
+          <div class="pricing">
+            <div class="price">
+              <b>Basic Sponsor</b>
+              <div class="amount">€25</div>
+              <div class="per">per month</div>
+              <ul>
+                <li>Education contribution</li>
+                <li>Learning materials</li>
+                <li>Annual progress update</li>
+              </ul>
+              <div class="action"><a class="btn green" href="#sponsorship">Sponsor</a></div>
+            </div>
+
+            <div class="price featured">
+              <b>Full Child Sponsor</b>
+              <div class="amount">€50</div>
+              <div class="per">per month</div>
+              <ul>
+                <li>Full school support</li>
+                <li>Uniforms & books</li>
+                <li>Sports equipment</li>
+                <li>Quarterly updates</li>
+              </ul>
+              <div class="action"><a class="btn green" href="#sponsorship">Sponsor</a></div>
+            </div>
+
+            <div class="price">
+              <b>Champion Sponsor</b>
+              <div class="amount">€100</div>
+              <div class="per">per month</div>
+              <ul>
+                <li>Education + development support</li>
+                <li>Health & nutrition assistance</li>
+                <li>Bi-annual detailed report</li>
+                <li>Impact certificate</li>
+              </ul>
+              <div class="action"><a class="btn green" href="#sponsorship">Sponsor</a></div>
+            </div>
+
+            <div class="price">
+              <b>Annual Patron</b>
+              <div class="amount">€1,200</div>
+              <div class="per">per year</div>
+              <ul>
+                <li>Full annual scholarship support</li>
+                <li>Named sponsorship option (optional)</li>
+                <li>Recognition on website (optional)</li>
+                <li>Invitation to foundation events</li>
+              </ul>
+              <div class="action"><a class="btn green" href="#sponsorship">Sponsor</a></div>
+            </div>
+          </div>
+
+          <p class="small" style="margin-top:10px;">
+            Payments can be monthly or annual. Manual bank donations can be arranged on request.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPONSOR A SCHOOL -->
+  <section id="sponsor-school">
+    <div class="container">
+      <div class="section-title">
+        <h2>Sponsor a School</h2>
+        <p>Fund education and infrastructure to impact hundreds of children every year.</p>
+      </div>
+
+      <div class="split">
+        <div class="card">
+          <div class="kicker">What sponsors can fund</div>
+          <h3>School development areas</h3>
+          <ul>
+            <li>Classroom renovation or construction</li>
+            <li>Sports facilities and equipment</li>
+            <li>Books, computers and learning tools</li>
+            <li>Teacher training and support</li>
+            <li>School feeding programs</li>
+            <li>Water, sanitation and hygiene facilities</li>
+          </ul>
+          <p class="small" style="margin-top:10px;">
+            Corporate and institutional sponsors can receive CSR/ESG-friendly reporting.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="kicker">Packages</div>
+          <h3>Sponsorship packages</h3>
+
+          <div class="pricing">
+            <div class="price">
+              <b>Community Supporter</b>
+              <div class="amount">€2,500</div>
+              <div class="per">per year</div>
+              <ul>
+                <li>Equipment & learning materials</li>
+                <li>Website recognition</li>
+                <li>Annual report</li>
+              </ul>
+              <div class="action"><a class="btn primary" href="#sponsorship">Enquire</a></div>
+            </div>
+
+            <div class="price featured">
+              <b>Education Partner</b>
+              <div class="amount">€5,000</div>
+              <div class="per">per year</div>
+              <ul>
+                <li>Classroom support</li>
+                <li>Teacher assistance</li>
+                <li>Annual impact report</li>
+              </ul>
+              <div class="action"><a class="btn primary" href="#sponsorship">Enquire</a></div>
+            </div>
+
+            <div class="price">
+              <b>Gold School Sponsor</b>
+              <div class="amount">€10,000</div>
+              <div class="per">per year</div>
+              <ul>
+                <li>Major project component</li>
+                <li>Brand visibility (optional)</li>
+                <li>Media & PR support</li>
+              </ul>
+              <div class="action"><a class="btn primary" href="#sponsorship">Enquire</a></div>
+            </div>
+
+            <div class="price">
+              <b>Strategic Partner</b>
+              <div class="amount">€25,000+</div>
+              <div class="per">per year</div>
+              <ul>
+                <li>Full development program</li>
+                <li>Long-term partnership agreement</li>
+                <li>CSR/ESG reporting support</li>
+              </ul>
+              <div class="action"><a class="btn primary" href="#sponsorship">Enquire</a></div>
+            </div>
+          </div>
+
+          <p class="small" style="margin-top:10px;">
+            We can tailor sponsorship to your priorities: education, sport, health, skills and community development.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLAGSHIP PROJECT -->
+  <section id="flagship">
+    <div class="container">
+      <div class="section-title">
+        <h2>Flagship Project: School Infrastructure Completion (Africa)</h2>
+        <p>
+          An existing partner school needs funding to complete infrastructure that combines multi-sport development with vocational training:
+          carpentry, mechanics, plumbing, electrical engineering and a computer lab.
+        </p>
+      </div>
+
+      <div class="grid cols-2">
+        <div class="card">
+          <div class="kicker">Components</div>
+          <h3>What we are building</h3>
+          <ul>
+            <li><b>Multi-sport training ground</b> (football, basketball, volleyball, athletics/fitness)</li>
+            <li><b>Workshops facility</b> for practical skills education</li>
+            <li>Carpentry workshop</li>
+            <li>Mechanical workshop</li>
+            <li>Plumbing workshop</li>
+            <li>Electrical engineering workshop</li>
+            <li>Computer & digital skills lab</li>
+          </ul>
+          <p class="small" style="margin-top:10px;">
+            This project is designed as a model campus where students learn, train and graduate with real skills and real opportunity.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="kicker">Sponsor components</div>
+          <h3>Funding opportunities</h3>
+          <ul>
+            <li><b>€5,000</b> — Facility Supporter (tools & basic equipment)</li>
+            <li><b>€10,000</b> — Sponsor a Workshop (choose: carpentry / mechanics / plumbing / electrical / computer lab)</li>
+            <li><b>€20,000</b> — Sponsor the Sports Ground (construction + equipment)</li>
+            <li><b>€50,000+</b> — Strategic Campus Partner (major completion & long-term partnership)</li>
+          </ul>
+
+          <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+            <a class="btn primary" href="#sponsorship">Sponsor a component</a>
+            <a class="btn" href="#contact">Request details</a>
+          </div>
+
+          <p class="small" style="margin-top:10px;">
+            Sponsors receive progress updates, photos/videos and a completion report for funded components.
+          </p>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:14px;">
+        <div class="kicker">Transparency</div>
+        <h3>Governance & accountability</h3>
+        <p>
+          BS Group Foundation works with verified local partners and school leadership. Funds are allocated to agreed components,
+          with monitoring, documentation and progress reporting to ensure responsible use and measurable impact.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+  <section id="events">
+    <div class="container">
+      <div class="section-title">
+        <h2>Events</h2>
+        <p>We host fundraising and community events to support our programs and projects.</p>
+      </div>
+
+      <div class="grid cols-3">
+        <div class="card">
+          <div class="kicker">Fundraising</div>
+          <h3>Charity Gala & Dinner</h3>
+          <p>Corporate-friendly event with presentations, pledges and partnerships.</p>
+        </div>
+
+        <div class="card">
+          <div class="kicker">Sport</div>
+          <h3>Charity Match / Tournament</h3>
+          <p>Community engagement, youth spotlight, and sponsor activations.</p>
+        </div>
+
+        <div class="card">
+          <div class="kicker">Community</div>
+          <h3>Skills & Mentorship Day</h3>
+          <p>Workshops, careers guidance and mentorship sessions for youth and families.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DONATE -->
+  <section id="donate">
+    <div class="container">
+      <div class="section-title">
+        <h2>Donate</h2>
+        <p>
+          You can donate toward child sponsorship, school sponsorship, or specific flagship project components.
+          (Replace the buttons below with your payment link later: Stripe, PayPal, GoFundMe, or a donation platform.)
+        </p>
+      </div>
+
+      <div class="grid cols-3">
+        <div class="card">
+          <h3 style="color:var(--brand);">€50</h3>
+          <p>Supports learning materials and essential equipment.</p>
+          <div style="margin-top:12px;">
+            <a class="btn primary" href="#sponsorship">Donate</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 style="color:var(--brand);">€250</h3>
+          <p>Helps fund tools, uniforms, and school resources.</p>
+          <div style="margin-top:12px;">
+            <a class="btn primary" href="#sponsorship">Donate</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 style="color:var(--brand);">€1,000+</h3>
+          <p>Funds a measurable project component with reporting.</p>
+          <div style="margin-top:12px;">
+            <a class="btn primary" href="#sponsorship">Donate</a>
+          </div>
+        </div>
+      </div>
+
+      <p class="small" style="margin-top:10px;">
+        Tip: once you have a payment URL, replace the “Donate” buttons with that link.
+      </p>
+    </div>
+  </section>
+
+  <!-- GET INVOLVED / SPONSORSHIP FORM -->
+  <section id="sponsorship">
+    <div class="container">
+      <div class="section-title">
+        <h2>Get Involved</h2>
+        <p>Tell us what you would like to sponsor. This form goes to your Netlify dashboard (Forms).</p>
+      </div>
+
+      <div class="split">
+        <div class="card">
+          <div class="kicker">How it works</div>
+          <h3>Simple & transparent process</h3>
+          <ul>
+            <li>Choose a program (Child / School / Flagship component)</li>
+            <li>We confirm details and provide documentation</li>
+            <li>Funds are allocated and monitored with updates</li>
+            <li>You receive progress reporting and impact summaries</li>
+          </ul>
+          <p class="small" style="margin-top:10px;">
+            For corporate or institutional sponsorship, we can provide a partnership letter and CSR/ESG reporting structure.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="kicker">Netlify form</div>
+          <h3>Sponsorship interest form</h3>
+
+          <form name="sponsorship-interest" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="sponsorship-interest" />
+            <p style="display:none">
+              <label>Don’t fill this out: <input name="bot-field" /></label>
+            </p>
+
+            <div class="form-row">
+              <div>
+                <label for="fullName">Full name</label>
+                <input id="fullName" name="fullName" type="text" placeholder="Your name" required />
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="you@email.com" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div>
+                <label for="type">I want to support</label>
+                <select id="type" name="supportType" required>
+                  <option value="" selected disabled>Select one</option>
+                  <option>Sponsor a Child</option>
+                  <option>Sponsor a School</option>
+                  <option>Flagship Project (Infrastructure)</option>
+                  <option>Health & Wellbeing Program</option>
+                  <option>Women Empowerment Program</option>
+                  <option>Entrepreneurship Program</option>
+                  <option>General Donation</option>
+                  <option>Corporate / Institutional Partnership</option>
+                </select>
+              </div>
+              <div>
+                <label for="budget">Budget (optional)</label>
+                <select id="budget" name="budget">
+                  <option value="" selected>Choose</option>
+                  <option>€25–€100 / month</option>
+                  <option>€250–€1,000</option>
+                  <option>€2,500–€10,000</option>
+                  <option>€10,000–€25,000</option>
+                  <option>€25,000+</option>
+                </select>
+              </div>
+            </div>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us what you would like to sponsor and any questions you have." required></textarea>
+
+            <button class="btn primary" type="submit">Submit</button>
+            <p class="small">By submitting, you agree we can contact you about sponsorship options and project details.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-title">
+        <h2>Contact</h2>
+        <p>Send us a message. This form also goes to your Netlify dashboard (Forms).</p>
+      </div>
+
+      <div class="split">
+        <div class="card">
+          <div class="kicker">Contact details</div>
+          <h3>Let’s work together</h3>
+          <p class="small">
+            Add your official email address and contact details here once ready.
+          </p>
+
+          <div class="hr"></div>
+
+          <p class="small">
+            Suggested emails:
+            <br />• info@bsgroupfoundation.org
+            <br />• partnerships@bsgroupfoundation.org
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="kicker">Netlify form</div>
+          <h3>Contact form</h3>
+
+          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact" />
+            <p style="display:none">
+              <label>Don’t fill this out: <input name="bot-field" /></label>
+            </p>
+
+            <div class="form-row">
+              <div>
+                <label for="cname">Full name</label>
+                <input id="cname" name="name" type="text" placeholder="Your name" required />
+              </div>
+              <div>
+                <label for="cemail">Email</label>
+                <input id="cemail" name="email" type="email" placeholder="you@email.com" required />
+              </div>
+            </div>
+
+            <label for="cmessage">Message</label>
+            <textarea id="cmessage" name="message" placeholder="How can we help?" required></textarea>
+
+            <button class="btn primary" type="submit">Send message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div style="font-weight:950; color:var(--brand);">BS Group Foundation</div>
+          <p class="small" style="margin-top:8px;">
+            Empowering children and communities through education, sport, health, skills development, women empowerment and entrepreneurship —
+            building sustainable futures across Africa and emerging regions.
+          </p>
+          <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+            <a class="btn green" href="#sponsor-child">Sponsor a Child</a>
+            <a class="btn primary" href="#sponsor-school">Sponsor a School</a>
+          </div>
+        </div>
+
+        <div class="links">
+          <div class="kicker">Navigate</div>
+          <a href="#about">About</a>
+          <a href="#impact">Impact Areas</a>
+          <a href="#programs">Programs</a>
+          <a href="#flagship">Flagship Project</a>
+          <a href="#events">Events</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div class="links">
+          <div class="kicker">Get involved</div>
+          <a href="#sponsorship">Partnerships</a>
+          <a href="#donate">Donate</a>
+          <a href="#sponsor-child">Sponsor a Child</a>
+          <a href="#sponsor-school">Sponsor a School</a>
+          <p class="small" style="margin-top:10px;">
+            © <span id="year"></span> BS Group Foundation. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (hamburger && mobileMenu) {
+      hamburger.addEventListener('click', () => {
+        const isOpen = mobileMenu.style.display === 'block';
+        mobileMenu.style.display = isOpen ? 'none' : 'block';
+      });
+      mobileMenu.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => mobileMenu.style.display = 'none');
+      });
+    }
+
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
