@@ -343,7 +343,39 @@
       transition: background 0.2s ease;
     }
     .navlinks a:hover { background: #eef5ff; }
+/* === INDEX NAV HARD FIX (match flagship behaviour) === */
+
+/* Force single-row nav layout */
+.nav-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+}
+
+/* Center menu and prevent CTA from dropping */
+.navlinks{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:18px;
+  flex:1;
+  flex-wrap:wrap;
+}
+
+/* Keep language + buttons locked on the right */
+.nav-cta{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex-wrap:nowrap;
+  white-space:nowrap;
+}
+
+    
   </style>
+
+  
 </head>
 
 <body>
@@ -1103,3 +1135,4 @@
   </script>
 </body>
 </html>
+
