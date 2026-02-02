@@ -47,6 +47,7 @@
       font-weight:800;
       transition:.2s transform, .2s box-shadow, .2s border-color;
       box-shadow: 0 8px 16px rgba(16, 40, 80, .06);
+      cursor:pointer;
     }
     .btn:hover{transform:translateY(-1px); border-color:#d6e1f2; box-shadow: 0 14px 22px rgba(16, 40, 80, .10)}
     .btn.primary{border:none; background: linear-gradient(135deg, var(--brand), #2a6ed0); color:#fff;}
@@ -89,7 +90,6 @@
 
     .nav-cta{display:flex; align-items:center; gap:10px}
 
-    /* Language dropdown */
     .langSelect{
       padding:10px 12px;
       border-radius:999px;
@@ -226,6 +226,7 @@
 
 <body>
 
+  <!-- NAV (single, no duplicates) -->
   <div class="nav">
     <div class="container">
 
@@ -259,9 +260,7 @@
           <a class="btn ghost" href="index.html#sponsorship" data-i18n="btn_get_involved">Get Involved</a>
           <a class="btn primary" href="index.html#donate" data-i18n="btn_donate">Donate</a>
 
-          <button class="menuToggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false">
-            ☰
-          </button>
+          <button class="menuToggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
         </div>
       </div>
 
@@ -307,7 +306,6 @@
         </p>
 
         <div class="gallery">
-
           <div class="photo">
             <img src="images/IMG-20201007-WA0004.jpg" alt="Primary classroom activity">
             <div class="cap" data-i18n="cap_01">Primary education classroom supporting vulnerable children.</div>
@@ -357,7 +355,6 @@
             <img src="images/IMG-20211216-WA0015.jpg" alt="School infrastructure and gathering">
             <div class="cap" data-i18n="cap_10">Completed infrastructure supporting education and community activities.</div>
           </div>
-
         </div>
 
         <div class="hero-actions">
@@ -471,10 +468,8 @@
     </div>
   </footer>
 
-  <!-- i18n (EN/FR/ES) -->
   <script src="i18n.js"></script>
 
-  <!-- Mobile menu toggle -->
   <script>
     (function(){
       const btn = document.getElementById('menuToggle');
