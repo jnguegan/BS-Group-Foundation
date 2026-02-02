@@ -347,4 +347,7 @@
     });
   });
 
-  // Expose for debugg
+  // Expose for debug
+window.bsgfSetLang = setLang;
+
+})();
