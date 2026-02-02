@@ -53,6 +53,7 @@
     .btn.green{border:none; background: linear-gradient(135deg, var(--brand2), #43c37a); color:#fff;}
     .btn.ghost{background: rgba(255,255,255,.75);}
 
+    /* NAV */
     .nav{
       position:sticky; top:0; z-index:50;
       background: rgba(255,255,255,.86);
@@ -85,7 +86,52 @@
       color:rgba(11,27,51,.92);
     }
     .menu a:hover{background:var(--soft)}
+
     .nav-cta{display:flex; align-items:center; gap:10px}
+
+    /* Language dropdown */
+    .langSelect{
+      padding:10px 12px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:#fff;
+      font-weight:800;
+      color:rgba(11,27,51,.92);
+      box-shadow: 0 8px 16px rgba(16, 40, 80, .06);
+    }
+
+    /* Mobile hamburger */
+    .menuToggle{
+      display:none;
+      width:44px; height:44px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:#fff;
+      box-shadow: 0 8px 16px rgba(16, 40, 80, .06);
+      font-size:18px;
+      cursor:pointer;
+    }
+
+    /* Mobile menu panel */
+    .mobileMenu{
+      margin-top:10px;
+      border-top:1px solid var(--line);
+      padding:12px 0 6px;
+      display:grid;
+      gap:6px;
+    }
+    .mobileMenu a{
+      padding:10px 10px;
+      border-radius:12px;
+      color:rgba(11,27,51,.92);
+    }
+    .mobileMenu a:hover{background:var(--soft)}
+    .mobileActions{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      padding-top:10px;
+    }
 
     header.hero{padding:42px 0 18px;}
     .hero-card{
@@ -137,6 +183,31 @@
       gap:12px; flex-wrap:wrap;
     }
 
+    /* GALLERY */
+    .gallery{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap:18px;
+      margin-top:14px;
+    }
+    .photo{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow: 0 10px 18px rgba(16, 40, 80, .06);
+    }
+    .photo img{
+      width:100%;
+      height:auto;
+      display:block;
+    }
+    .photo .cap{
+      padding:12px;
+      color:rgba(11,27,51,.82);
+      font-size:13px;
+    }
+
     .footer{
       padding:22px 0 34px;
       border-top:1px solid var(--line);
@@ -148,6 +219,7 @@
       .grid.cols-2{grid-template-columns:1fr}
       .grid.cols-3{grid-template-columns:1fr}
       .menu{display:none}
+      .menuToggle{display:inline-flex}
     }
   </style>
 </head>
@@ -156,8 +228,9 @@
 
   <div class="nav">
     <div class="container">
+
       <div class="nav-inner">
-        <a class="brand" href="index.html">
+        <a class="brand" href="Index.html">
           <img src="logo.png" alt="BS Group Foundation Logo" />
           <div>
             <div class="name">BS Group Foundation</div>
@@ -166,97 +239,137 @@
         </a>
 
         <nav class="menu" aria-label="Main navigation">
-          <a href="index.html#about">About</a>
-          <a href="index.html#impact">Impact Areas</a>
-          <a href="index.html#programs">Programs</a>
-          <a href="index.html#sponsor-child">Sponsor a Child</a>
-          <a href="index.html#sponsor-school">Sponsor a School</a>
-          <a href="flagship.html">Flagship Project</a>
-          <a href="index.html#events">Events</a>
-          <a href="index.html#contact">Contact</a>
+          <a href="Index.html#about" data-i18n="nav_about">About</a>
+          <a href="Index.html#impact" data-i18n="nav_impact">Impact Areas</a>
+          <a href="Index.html#programs" data-i18n="nav_programs">Programs</a>
+          <a href="Index.html#sponsor-child" data-i18n="nav_sponsor_child">Sponsor a Child</a>
+          <a href="Index.html#sponsor-school" data-i18n="nav_sponsor_school">Sponsor a School</a>
+          <a href="flagship.html" data-i18n="nav_flagship">Flagship Project</a>
+          <a href="Index.html#events" data-i18n="nav_events">Events</a>
+          <a href="Index.html#contact" data-i18n="nav_contact">Contact</a>
         </nav>
 
         <div class="nav-cta">
-          <a class="btn ghost" href="index.html#get-involved">Get Involved</a>
-          <a class="btn primary" href="index.html#donate">Donate</a>
+          <!-- Language switcher -->
+          <select data-lang-select="bsgf" class="langSelect" aria-label="Language">
+            <option value="en">EN</option>
+            <option value="fr">FR</option>
+            <option value="es">ES</option>
+          </select>
+
+          <a class="btn ghost" href="Index.html#get-involved" data-i18n="btn_get_involved">Get Involved</a>
+          <a class="btn primary" href="Index.html#donate" data-i18n="btn_donate">Donate</a>
+
+          <!-- Mobile toggle -->
+          <button class="menuToggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false">
+            ☰
+          </button>
         </div>
       </div>
+
+      <!-- MOBILE MENU PANEL -->
+      <div class="mobileMenu" id="mobileMenu" hidden>
+        <a href="Index.html#about" data-i18n="nav_about">About</a>
+        <a href="Index.html#impact" data-i18n="nav_impact">Impact Areas</a>
+        <a href="Index.html#programs" data-i18n="nav_programs">Programs</a>
+        <a href="Index.html#sponsor-child" data-i18n="nav_sponsor_child">Sponsor a Child</a>
+        <a href="Index.html#sponsor-school" data-i18n="nav_sponsor_school">Sponsor a School</a>
+        <a href="flagship.html" data-i18n="nav_flagship">Flagship Project</a>
+        <a href="Index.html#events" data-i18n="nav_events">Events</a>
+        <a href="Index.html#contact" data-i18n="nav_contact">Contact</a>
+
+        <div class="mobileActions">
+          <select data-lang-select="bsgf" class="langSelect" aria-label="Language">
+            <option value="en">EN</option>
+            <option value="fr">FR</option>
+            <option value="es">ES</option>
+          </select>
+
+          <a class="btn ghost" href="Index.html#get-involved" data-i18n="btn_get_involved">Get Involved</a>
+          <a class="btn primary" href="Index.html#donate" data-i18n="btn_donate">Donate</a>
+        </div>
+      </div>
+
     </div>
   </div>
 
   <header class="hero">
     <div class="container">
       <div class="hero-card">
-        <div class="badge">🇨🇲 Cameroon • Adamaoua Region • Primary & Secondary School</div>
-        <h1>Flagship Project: School Infrastructure Completion</h1>
-        <p class="lead">
+        <div class="badge" data-i18n="flagship_badge">Cameroon • Adamaoua Region • Primary & Secondary School</div>
+
+        <h1 data-i18n="flagship_h1">Flagship Project: School Infrastructure Completion</h1>
+
+        <p class="lead" data-i18n="flagship_lead">
           BS Group Foundation is supporting the completion of a Primary and Secondary Community School campus in the Adamaoua Region of Cameroon, integrating education, vocational skills and sport development.
         </p>
-        <h2>Project Gallery</h2>
-<p class="small">
-  Real images from our partner school campus in the Adamaoua Region, Cameroon, showing current facilities, construction progress and community engagement.
-</p>
 
-<div class="gallery">
+        <h2 data-i18n="gallery_title">Project Gallery</h2>
+        <p class="small" data-i18n="gallery_sub">
+          Real images from our partner school campus in the Adamaoua Region, Cameroon, showing current facilities, construction progress and community engagement.
+        </p>
 
-  <div class="photo">
-    <img src="images/IMG-20201007-WA0004.jpg" alt="Primary classroom activity">
-    <div class="cap">Primary education classroom supporting vulnerable children.</div>
-  </div>
+        <div class="gallery">
 
-  <div class="photo">
-    <img src="images/IMG-20210328-WA0009.jpg" alt="School campus overview">
-    <div class="cap">Campus overview showing multiple classroom blocks and expansion areas.</div>
-  </div>
+          <div class="photo">
+            <img src="images/IMG-20201007-WA0004.jpg" alt="Primary classroom activity">
+            <div class="cap" data-i18n="cap_01">Primary education classroom supporting vulnerable children.</div>
+          </div>
 
-  <div class="photo">
-    <img src="images/IMG-20210328-WA0011.jpg" alt="Construction work in progress">
-    <div class="cap">Ongoing construction of new classrooms and facilities.</div>
-  </div>
+          <div class="photo">
+            <img src="images/IMG-20210328-WA0009.jpg" alt="School campus overview">
+            <div class="cap" data-i18n="cap_02">Campus overview showing multiple classroom blocks and expansion areas.</div>
+          </div>
 
-  <div class="photo">
-    <img src="images/IMG-20210328-WA0014.jpg" alt="Roof structure under construction">
-    <div class="cap">Roof structure installation for new classroom buildings.</div>
-  </div>
+          <div class="photo">
+            <img src="images/IMG-20210328-WA0011.jpg" alt="Construction work in progress">
+            <div class="cap" data-i18n="cap_03">Ongoing construction of new classrooms and facilities.</div>
+          </div>
 
-  <div class="photo">
-    <img src="images/IMG-20210419-WA0027.jpg" alt="Finished school building exterior">
-    <div class="cap">Finished classroom block providing safe learning spaces.</div>
-  </div>
+          <div class="photo">
+            <img src="images/IMG-20210328-WA0014.jpg" alt="Roof structure under construction">
+            <div class="cap" data-i18n="cap_04">Roof structure installation for new classroom buildings.</div>
+          </div>
 
-  <div class="photo">
-    <img src="images/IMG-20210419-WA0028.jpg" alt="School corridor exterior">
-    <div class="cap">Exterior corridor connecting classrooms and facilities.</div>
-  </div>
+          <div class="photo">
+            <img src="images/IMG-20210419-WA0027.jpg" alt="Finished school building exterior">
+            <div class="cap" data-i18n="cap_05">Finished classroom block providing safe learning spaces.</div>
+          </div>
 
-  <div class="photo">
-    <img src="images/IMG-20210724-WA0000.jpg" alt="School ceremony with children">
-    <div class="cap">School ceremony celebrating students and community involvement.</div>
-  </div>
+          <div class="photo">
+            <img src="images/IMG-20210419-WA0028.jpg" alt="School corridor exterior">
+            <div class="cap" data-i18n="cap_06">Exterior corridor connecting classrooms and facilities.</div>
+          </div>
 
-  <div class="photo">
-    <img src="images/IMG-20210724-WA0004.jpg" alt="Community gathering at school">
-    <div class="cap">Community gathering highlighting strong local support for the school.</div>
-  </div>
+          <div class="photo">
+            <img src="images/IMG-20210724-WA0000.jpg" alt="School ceremony with children">
+            <div class="cap" data-i18n="cap_07">School ceremony celebrating students and community involvement.</div>
+          </div>
 
-  <div class="photo">
-    <img src="images/IMG-20211215-WA0013.jpg" alt="Large community event on campus">
-    <div class="cap">Large community event hosted on the school campus.</div>
-  </div>
+          <div class="photo">
+            <img src="images/IMG-20210724-WA0004.jpg" alt="Community gathering at school">
+            <div class="cap" data-i18n="cap_08">Community gathering highlighting strong local support for the school.</div>
+          </div>
 
-  <div class="photo">
-    <img src="images/IMG-20211216-WA0015.jpg" alt="School infrastructure and gathering">
-    <div class="cap">Completed infrastructure supporting education and community activities.</div>
-  </div>
+          <div class="photo">
+            <img src="images/IMG-20211215-WA0013.jpg" alt="Large community event on campus">
+            <div class="cap" data-i18n="cap_09">Large community event hosted on the school campus.</div>
+          </div>
 
-</div>
+          <div class="photo">
+            <img src="images/IMG-20211216-WA0015.jpg" alt="School infrastructure and gathering">
+            <div class="cap" data-i18n="cap_10">Completed infrastructure supporting education and community activities.</div>
+          </div>
+
+        </div>
 
         <div class="hero-actions">
-          <a class="btn green" href="index.html#sponsor-school">Sponsor a School</a>
-          <a class="btn primary" href="index.html#donate">Donate</a>
-          <a class="btn" href="index.html#contact">Contact</a>
+          <a class="btn green" href="Index.html#sponsor-school" data-i18n="btn_sponsor_school">Sponsor a School</a>
+          <a class="btn primary" href="Index.html#donate" data-i18n="btn_donate">Donate</a>
+          <a class="btn" href="Index.html#contact" data-i18n="btn_contact">Contact</a>
         </div>
-        <p class="small" style="margin-top:10px;">
+
+        <p class="small" style="margin-top:10px;" data-i18n="flagship_note">
           Primary School is operational. Secondary School infrastructure is in place and currently in the final administrative and authorization phase before opening.
         </p>
       </div>
@@ -266,76 +379,76 @@
   <main class="container">
 
     <section>
-      <h2>Project Location & Institutional Status</h2>
-      <p>
+      <h2 data-i18n="sec_status_title">Project Location & Institutional Status</h2>
+      <p data-i18n="sec_status_p1">
         This project is implemented in partnership with an established <strong>Primary and Secondary Community School</strong> located in the <strong>Adamaoua Region, Cameroon</strong>.
       </p>
-      <p>
+      <p data-i18n="sec_status_p2">
         The school currently operates as a fully authorized <strong>Primary School</strong>. The <strong>Secondary School</strong> is under development and is not yet operational due to funding, ongoing administrative paperwork and authorization requirements.
       </p>
     </section>
 
     <section>
-      <h2>What We Are Building</h2>
+      <h2 data-i18n="sec_build_title">What We Are Building</h2>
       <div class="grid cols-3">
         <div class="card">
-          <h3>Multi-sport Training Ground</h3>
+          <h3 data-i18n="build_1_title">Multi-sport Training Ground</h3>
           <ul>
-            <li>Football, basketball, volleyball</li>
-            <li>Athletics & fitness</li>
-            <li>Safety fencing and basic lighting</li>
+            <li data-i18n="build_1_li1">Football, basketball, volleyball</li>
+            <li data-i18n="build_1_li2">Athletics & fitness</li>
+            <li data-i18n="build_1_li3">Safety fencing and basic lighting</li>
           </ul>
         </div>
         <div class="card">
-          <h3>Skills & Employability Workshops</h3>
+          <h3 data-i18n="build_2_title">Skills & Employability Workshops</h3>
           <ul>
-            <li>Carpentry</li>
-            <li>Mechanics</li>
-            <li>Plumbing</li>
-            <li>Electrical installation</li>
-            <li>Computer & digital skills</li>
+            <li data-i18n="build_2_li1">Carpentry</li>
+            <li data-i18n="build_2_li2">Mechanics</li>
+            <li data-i18n="build_2_li3">Plumbing</li>
+            <li data-i18n="build_2_li4">Electrical installation</li>
+            <li data-i18n="build_2_li5">Computer & digital skills</li>
           </ul>
         </div>
         <div class="card">
-          <h3>Support Facilities</h3>
+          <h3 data-i18n="build_3_title">Support Facilities</h3>
           <ul>
-            <li>Instructor rooms & training spaces</li>
-            <li>Tools storage & utilities</li>
-            <li>Monitoring & reporting</li>
+            <li data-i18n="build_3_li1">Instructor rooms & training spaces</li>
+            <li data-i18n="build_3_li2">Tools storage & utilities</li>
+            <li data-i18n="build_3_li3">Monitoring & reporting</li>
           </ul>
         </div>
       </div>
     </section>
 
     <section>
-      <h2>Who This Project Serves</h2>
+      <h2 data-i18n="sec_serves_title">Who This Project Serves</h2>
       <div class="grid cols-2">
         <div class="card">
-          <h3>Direct beneficiaries</h3>
+          <h3 data-i18n="serves_1_title">Direct beneficiaries</h3>
           <ul>
-            <li>300–600 students per year</li>
-            <li>Children and youth from vulnerable backgrounds</li>
-            <li>Young women entering technical training</li>
+            <li data-i18n="serves_1_li1">300–600 students per year</li>
+            <li data-i18n="serves_1_li2">Children and youth from vulnerable backgrounds</li>
+            <li data-i18n="serves_1_li3">Young women entering technical training</li>
           </ul>
         </div>
         <div class="card">
-          <h3>Long-term outcomes</h3>
+          <h3 data-i18n="serves_2_title">Long-term outcomes</h3>
           <ul>
-            <li>Expanded access to secondary education</li>
-            <li>Employability and entrepreneurship pathways</li>
-            <li>Reduced dropout rates and youth unemployment</li>
+            <li data-i18n="serves_2_li1">Expanded access to secondary education</li>
+            <li data-i18n="serves_2_li2">Employability and entrepreneurship pathways</li>
+            <li data-i18n="serves_2_li3">Reduced dropout rates and youth unemployment</li>
           </ul>
         </div>
       </div>
 
       <div class="cta">
         <div>
-          <strong>Want to support this flagship project?</strong><br />
-          <span class="small">Partner with us, sponsor a component, or fund a priority need.</span>
+          <strong data-i18n="cta_title">Want to support this flagship project?</strong><br />
+          <span class="small" data-i18n="cta_sub">Partner with us, sponsor a component, or fund a priority need.</span>
         </div>
         <div style="display:flex; gap:10px; flex-wrap:wrap;">
-          <a class="btn" href="index.html#get-involved">Become a Partner</a>
-          <a class="btn primary" href="index.html#donate">Donate</a>
+          <a class="btn" href="Index.html#get-involved" data-i18n="btn_partner">Become a Partner</a>
+          <a class="btn primary" href="Index.html#donate" data-i18n="btn_donate">Donate</a>
         </div>
       </div>
     </section>
@@ -350,5 +463,49 @@
           <span class="small">Education • Sport • Health • Skills • Opportunity</span>
         </div>
         <div class="small">
-          <a href="index.html#contact">Contact</a> •
-          <a href
+          <a href="Index.html#contact" data-i18n="nav_contact">Contact</a> •
+          <a href="Index.html#donate" data-i18n="btn_donate">Donate</a> •
+          <a href="Index.html" data-i18n="btn_home">Home</a>
+        </div>
+      </div>
+      <div class="small" style="margin-top:10px;">
+        © <span id="year"></span> BS Group Foundation. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- i18n (EN/FR/ES) -->
+  <script src="i18n.js"></script>
+
+  <!-- Mobile menu toggle -->
+  <script>
+    (function(){
+      const btn = document.getElementById('menuToggle');
+      const panel = document.getElementById('mobileMenu');
+      if(!btn || !panel) return;
+
+      btn.addEventListener('click', () => {
+        const isOpen = !panel.hasAttribute('hidden');
+        if(isOpen){
+          panel.setAttribute('hidden','');
+          btn.setAttribute('aria-expanded','false');
+        } else {
+          panel.removeAttribute('hidden');
+          btn.setAttribute('aria-expanded','true');
+        }
+      });
+
+      panel.addEventListener('click', (e) => {
+        if(e.target.tagName === 'A'){
+          panel.setAttribute('hidden','');
+          btn.setAttribute('aria-expanded','false');
+        }
+      });
+    })();
+
+    // Footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
