@@ -371,7 +371,50 @@
   flex-wrap:nowrap;
   white-space:nowrap;
 }
+/* === INDEX NAV: make FR layout look like flagship (clean + linear wrap) === */
+@media (min-width: 981px){
+  .nav-inner{
+    gap: 10px;
+    align-items: center;
+  }
 
+  /* Let the middle nav take the available space and wrap neatly */
+  .navlinks{
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 8px;
+    column-gap: 14px;
+  }
+
+  /* Slightly tighter menu items (FR is longer) */
+  .navlinks a{
+    font-size: 13px;
+    padding: 8px 8px;
+  }
+
+  /* Give a bit more room by reducing brand minimum width */
+  .brand{
+    min-width: 210px;
+  }
+
+  /* Keep CTA compact so it doesn't force extra wraps */
+  .nav-cta{
+    gap: 8px;
+    flex-wrap: nowrap;
+  }
+
+  .btn{
+    padding: 10px 14px;
+  }
+
+  .langSelect{
+    padding: 10px 12px;
+  }
+}
+
+    
     
   </style>
 
@@ -1135,5 +1178,6 @@
   </script>
 </body>
 </html>
+
 
 
