@@ -419,6 +419,67 @@
   text-overflow: ellipsis;
   max-width: 200px;
 }
+/* =========================================================
+   INDEX NAV FIX (FR): allow brand area to expand vertically
+   and keep nav clean & readable (match flagship behaviour)
+   ========================================================= */
+
+@media (min-width: 981px){
+
+  /* Let the nav bar grow vertically when brand wraps */
+  .nav-inner{
+    align-items: flex-start;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
+  /* Allow brand block to shrink horizontally and grow vertically */
+  .brand{
+    min-width: 0 !important;
+    max-width: 260px;
+    align-items: flex-start;
+  }
+
+  /* Foundation name can wrap naturally */
+  .brand .name{
+    white-space: normal;
+    line-height: 1.15;
+  }
+
+  /* Tagline: show fully (2+ lines), no cut-off */
+  .brand .tag{
+    white-space: normal;
+    overflow: visible;
+    line-height: 1.25;
+    max-width: 260px;
+  }
+
+  /* Give the menu the central space */
+  .navlinks{
+    flex: 1;
+    justify-content: center;
+  }
+
+  /* Slightly tighter nav items for FR */
+  .navlinks a{
+    font-size: 13px;
+    padding: 8px 8px;
+  }
+
+  /* Keep CTA compact so it doesn't force wrapping */
+  .nav-cta{
+    gap: 8px;
+    flex-wrap: nowrap;
+  }
+
+  .btn{
+    padding: 10px 14px;
+  }
+
+  .langSelect{
+    padding: 10px 12px;
+  }
+}
 
     
     
@@ -1184,6 +1245,7 @@
   </script>
 </body>
 </html>
+
 
 
 
