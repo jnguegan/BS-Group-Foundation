@@ -348,6 +348,4 @@
   });
 
   // Expose for debug
-window.bsgfSetLang = setLang;
 
-})();
