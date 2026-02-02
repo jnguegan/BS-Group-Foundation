@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-site="bsgf">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -124,6 +124,17 @@
     .nav-cta{display:flex; align-items:center; gap:10px}
 
     .hamburger{display:none}
+
+    /* Language switcher */
+    .langSelect{
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid #e6ecf5;
+      background:#fff;
+      color:var(--text);
+      font-weight:700;
+      cursor:pointer;
+    }
 
     /* Hero */
     header.hero{
@@ -306,27 +317,32 @@
         border-radius:12px;
       }
       .mobile-menu a:hover{background:var(--soft)}
+      .mobile-top{
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        gap:10px;
+        padding:8px 0 10px;
+      }
+      .mobile-top .langSelect{width:120px}
     }
+
     /* --- NAVIGATION MENU FIX --- */
-.navlinks {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  flex-wrap: wrap;
-}
-
-.navlinks a {
-  font-size: 14px;
-  color: rgba(11, 27, 51, 0.9);
-  text-decoration: none;
-  padding: 8px 10px;
-  border-radius: 10px;
-  transition: background 0.2s ease;
-}
-
-.navlinks a:hover {
-  background: #eef5ff;
-}
+    .navlinks {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .navlinks a {
+      font-size: 14px;
+      color: rgba(11, 27, 51, 0.9);
+      text-decoration: none;
+      padding: 8px 10px;
+      border-radius: 10px;
+      transition: background 0.2s ease;
+    }
+    .navlinks a:hover { background: #eef5ff; }
   </style>
 </head>
 
@@ -339,37 +355,53 @@
           <img src="logo.png" alt="BS Group Foundation Logo" />
           <div>
             <div class="name">BS Group Foundation</div>
-            <div class="tag">Education • Sport • Health • Skills • Opportunity</div>
+            <div class="tag" data-i18n="brand.tag">Education • Sport • Health • Skills • Opportunity</div>
           </div>
         </a>
 
         <nav class="navlinks" aria-label="Primary">
-  <a href="#about">About</a>
-  <a href="#impact">Impact Areas</a>
-  <a href="#programs">Programs</a>
-  <a href="#sponsor-child">Sponsor a Child</a>
-  <a href="#sponsor-school">Sponsor a School</a>
-  <a href="flagship.html">Flagship Project</a>
-  <a href="#events">Events</a>
-  <a href="#contact">Contact</a>
-</nav>
+          <a href="#about" data-i18n="nav.about">About</a>
+          <a href="#impact" data-i18n="nav.impact">Impact Areas</a>
+          <a href="#programs" data-i18n="nav.programs">Programs</a>
+          <a href="#sponsor-child" data-i18n="nav.sponsorChild">Sponsor a Child</a>
+          <a href="#sponsor-school" data-i18n="nav.sponsorSchool">Sponsor a School</a>
+          <a href="flagship.html" data-i18n="nav.flagship">Flagship Project</a>
+          <a href="#events" data-i18n="nav.events">Events</a>
+          <a href="#contact" data-i18n="nav.contact">Contact</a>
+        </nav>
 
         <div class="nav-cta">
-          <a class="btn ghost" href="#sponsorship">Get Involved</a>
-          <a class="btn primary" href="#donate">Donate</a>
-          <button class="btn hamburger" id="hamburger" type="button" aria-label="Open menu">Menu</button>
+          <!-- Language switcher (desktop) -->
+          <select class="langSelect" data-lang-select="bsgf" aria-label="Language">
+            <option value="en">EN</option>
+            <option value="fr">FR</option>
+            <option value="es">ES</option>
+          </select>
+
+          <a class="btn ghost" href="#sponsorship" data-i18n="cta.getInvolved">Get Involved</a>
+          <a class="btn primary" href="#donate" data-i18n="cta.donate">Donate</a>
+          <button class="btn hamburger" id="hamburger" type="button" aria-label="Open menu" data-i18n="cta.menu">Menu</button>
         </div>
       </div>
 
       <div class="mobile-menu" id="mobileMenu">
-        <a href="#about">About</a>
-        <a href="#impact">Impact Areas</a>
-        <a href="#programs">Programs</a>
-        <a href="#sponsor-child">Sponsor a Child</a>
-        <a href="#sponsor-school">Sponsor a School</a>
-        <a href="#flagship">Flagship Project</a>
-        <a href="#events">Events</a>
-        <a href="#contact">Contact</a>
+        <div class="mobile-top">
+          <strong style="color:var(--muted); font-size:13px;" data-i18n="label.language">Language</strong>
+          <select class="langSelect" data-lang-select="bsgf" aria-label="Language">
+            <option value="en">EN</option>
+            <option value="fr">FR</option>
+            <option value="es">ES</option>
+          </select>
+        </div>
+
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#impact" data-i18n="nav.impact">Impact Areas</a>
+        <a href="#programs" data-i18n="nav.programs">Programs</a>
+        <a href="#sponsor-child" data-i18n="nav.sponsorChild">Sponsor a Child</a>
+        <a href="#sponsor-school" data-i18n="nav.sponsorSchool">Sponsor a School</a>
+        <a href="flagship.html" data-i18n="nav.flagship">Flagship Project</a>
+        <a href="#events" data-i18n="nav.events">Events</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
       </div>
     </div>
   </div>
@@ -379,59 +411,66 @@
     <div class="container">
       <div class="hero-grid">
         <div class="hero-card">
-          <span class="badge">🌍 Africa-focused programs • Transparent reporting • Sustainable impact</span>
-          <h1>Empowering Children & Communities Through Opportunity</h1>
-          <p class="lead">
+          <span class="badge" data-i18n="hero.badge">🌍 Africa-focused programs • Transparent reporting • Sustainable impact</span>
+          <h1 data-i18n="hero.h1">Empowering Children & Communities Through Opportunity</h1>
+          <p class="lead" data-i18n="hero.lead">
             BS Group Foundation supports vulnerable children, schools and communities through education access, sport development,
             healthcare, vocational skills, women empowerment and entrepreneurship — creating sustainable pathways to dignity,
             employment and long-term success.
           </p>
 
           <div class="hero-actions">
-            <a class="btn green" href="#sponsor-child">Sponsor a Child</a>
-            <a class="btn primary" href="#sponsor-school">Sponsor a School</a>
-            <a href="flagship.html" class="btn">Support Flagship Project</a>
+            <a class="btn green" href="#sponsor-child" data-i18n="hero.btn.sponsorChild">Sponsor a Child</a>
+            <a class="btn primary" href="#sponsor-school" data-i18n="hero.btn.sponsorSchool">Sponsor a School</a>
+            <a href="flagship.html" class="btn" data-i18n="hero.btn.supportFlagship">Support Flagship Project</a>
           </div>
 
           <div class="stats">
-            <div class="stat"><b>Education Access</b><span>Fees, materials, mentoring & school support</span></div>
-            <div class="stat"><b>Sport & Youth Development</b><span>Discipline, teamwork and opportunity</span></div>
-            <div class="stat"><b>Skills & Employability</b><span>Workshops for practical trades & digital skills</span></div>
-            <div class="stat"><b>Health & Wellbeing</b><span>Nutrition, hygiene and community care</span></div>
+            <div class="stat">
+              <b data-i18n="stats.education.title">Education Access</b>
+              <span data-i18n="stats.education.desc">Fees, materials, mentoring & school support</span>
+            </div>
+            <div class="stat">
+              <b data-i18n="stats.sport.title">Sport & Youth Development</b>
+              <span data-i18n="stats.sport.desc">Discipline, teamwork and opportunity</span>
+            </div>
+            <div class="stat">
+              <b data-i18n="stats.skills.title">Skills & Employability</b>
+              <span data-i18n="stats.skills.desc">Workshops for practical trades & digital skills</span>
+            </div>
+            <div class="stat">
+              <b data-i18n="stats.health.title">Health & Wellbeing</b>
+              <span data-i18n="stats.health.desc">Nutrition, hygiene and community care</span>
+            </div>
           </div>
 
           <p class="small" style="margin-top:14px;">
-            For corporate/institutional partnerships, visit <a href="#sponsorship" style="color:var(--brand); text-decoration:underline;">Get Involved</a>.
-            <select data-lang-select="bsgf" aria-label="Language" style="padding:10px 12px;border-radius:12px;border:1px solid #e6ecf5;">
-  <option value="en">EN</option>
-  <option value="fr">FR</option>
-  <option value="es">ES</option>
-</select>
-
+            <span data-i18n="hero.corporateLine">For corporate/institutional partnerships, visit</span>
+            <a href="#sponsorship" style="color:var(--brand); text-decoration:underline;" data-i18n="hero.corporateLink">Get Involved</a>.
           </p>
         </div>
 
         <aside class="hero-card">
-          <div class="kicker">Flagship Focus</div>
-          <h3 style="margin:8px 0 8px; color:#07162d;">School Infrastructure Completion (Africa)</h3>
-          <p style="margin:0; color:rgba(11,27,51,.82);">
+          <div class="kicker" data-i18n="flagship.kicker">Flagship Focus</div>
+          <h3 style="margin:8px 0 8px; color:#07162d;" data-i18n="flagship.title">School Infrastructure Completion (Africa)</h3>
+          <p style="margin:0; color:rgba(11,27,51,.82);" data-i18n="flagship.intro">
             We are supporting an existing partner school to complete critical infrastructure:
           </p>
 
           <div class="hr"></div>
 
           <ul style="margin:0; padding-left:18px; color:rgba(11,27,51,.82);">
-            <li><b>Multi-sport training ground</b> (football, basketball, volleyball, athletics/fitness)</li>
-            <li><b>Workshops facility</b> for skills training</li>
-            <li>Carpentry • Mechanics • Plumbing • Electrical • Computer lab</li>
+            <li data-i18n="flagship.li1"><b>Multi-sport training ground</b> (football, basketball, volleyball, athletics/fitness)</li>
+            <li data-i18n="flagship.li2"><b>Workshops facility</b> for skills training</li>
+            <li data-i18n="flagship.li3">Carpentry • Mechanics • Plumbing • Electrical • Computer lab</li>
           </ul>
 
           <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
-            <a href="flagship.html" class="btn primary">View Project</a>
-            <a class="btn" href="#donate">Donate</a>
+            <a href="flagship.html" class="btn primary" data-i18n="flagship.btn.view">View Project</a>
+            <a class="btn" href="#donate" data-i18n="cta.donate">Donate</a>
           </div>
 
-          <p class="small" style="margin-top:12px;">
+          <p class="small" style="margin-top:12px;" data-i18n="flagship.note">
             Sponsors receive progress updates, photos/videos, and clear reporting for funded components.
           </p>
         </aside>
@@ -443,8 +482,8 @@
   <section id="about">
     <div class="container">
       <div class="section-title">
-        <h2>About the Foundation</h2>
-        <p>
+        <h2 data-i18n="about.h2">About the Foundation</h2>
+        <p data-i18n="about.p">
           BS Group Foundation is dedicated to long-term community development by combining education, youth development,
           health, skills training, women empowerment and entrepreneurship.
         </p>
@@ -452,27 +491,27 @@
 
       <div class="grid cols-3">
         <div class="card">
-          <div class="kicker">Mission</div>
-          <h3>Opportunity & Dignity</h3>
-          <p>
+          <div class="kicker" data-i18n="about.mission.kicker">Mission</div>
+          <h3 data-i18n="about.mission.h3">Opportunity & Dignity</h3>
+          <p data-i18n="about.mission.p">
             To empower children, youth and communities by providing access to quality education, sport, healthcare,
             vocational skills and entrepreneurship opportunities — enabling long-term social and economic development.
           </p>
         </div>
 
         <div class="card">
-          <div class="kicker">Vision</div>
-          <h3>Sustainable Futures</h3>
-          <p>
+          <div class="kicker" data-i18n="about.vision.kicker">Vision</div>
+          <h3 data-i18n="about.vision.h3">Sustainable Futures</h3>
+          <p data-i18n="about.vision.p">
             Inclusive communities where every child and young person, regardless of background, can learn, grow, work and lead
             with confidence, purpose and dignity.
           </p>
         </div>
 
         <div class="card">
-          <div class="kicker">Values</div>
-          <h3>Integrity & Impact</h3>
-          <p>
+          <div class="kicker" data-i18n="about.values.kicker">Values</div>
+          <h3 data-i18n="about.values.h3">Integrity & Impact</h3>
+          <p data-i18n="about.values.p">
             Integrity, transparency, respect, inclusion and measurable outcomes guide all our programs and partnerships.
           </p>
         </div>
@@ -484,39 +523,39 @@
   <section id="impact">
     <div class="container">
       <div class="section-title">
-        <h2>Impact Areas</h2>
-        <p>Our programs are designed to deliver measurable change for children, families and communities.</p>
+        <h2 data-i18n="impact.h2">Impact Areas</h2>
+        <p data-i18n="impact.p">Our programs are designed to deliver measurable change for children, families and communities.</p>
       </div>
 
       <div class="grid cols-3">
         <div class="card">
-          <h3>🎓 Education Access</h3>
-          <p>School sponsorships, infrastructure support, learning materials, scholarships and mentoring for vulnerable children.</p>
+          <h3 data-i18n="impact.c1.h3">🎓 Education Access</h3>
+          <p data-i18n="impact.c1.p">School sponsorships, infrastructure support, learning materials, scholarships and mentoring for vulnerable children.</p>
         </div>
 
         <div class="card">
-          <h3>⚽ Sport Development</h3>
-          <p>Youth sport programs, facilities, training camps and talent development for discipline and opportunity.</p>
+          <h3 data-i18n="impact.c2.h3">⚽ Sport Development</h3>
+          <p data-i18n="impact.c2.p">Youth sport programs, facilities, training camps and talent development for discipline and opportunity.</p>
         </div>
 
         <div class="card">
-          <h3>🏥 Health & Wellbeing</h3>
-          <p>Basic healthcare access, nutrition support, hygiene education and community health initiatives.</p>
+          <h3 data-i18n="impact.c3.h3">🏥 Health & Wellbeing</h3>
+          <p data-i18n="impact.c3.p">Basic healthcare access, nutrition support, hygiene education and community health initiatives.</p>
         </div>
 
         <div class="card">
-          <h3>🛠 Skills & Employability</h3>
-          <p>Vocational training in carpentry, mechanics, plumbing, electrical engineering, digital skills and trades.</p>
+          <h3 data-i18n="impact.c4.h3">🛠 Skills & Employability</h3>
+          <p data-i18n="impact.c4.p">Vocational training in carpentry, mechanics, plumbing, electrical engineering, digital skills and trades.</p>
         </div>
 
         <div class="card">
-          <h3>👩 Women Empowerment</h3>
-          <p>Programs that support women’s education, leadership, wellbeing and economic participation.</p>
+          <h3 data-i18n="impact.c5.h3">👩 Women Empowerment</h3>
+          <p data-i18n="impact.c5.p">Programs that support women’s education, leadership, wellbeing and economic participation.</p>
         </div>
 
         <div class="card">
-          <h3>🚀 Entrepreneurship</h3>
-          <p>Micro-enterprise support, mentorship, practical training and community business development.</p>
+          <h3 data-i18n="impact.c6.h3">🚀 Entrepreneurship</h3>
+          <p data-i18n="impact.c6.p">Micro-enterprise support, mentorship, practical training and community business development.</p>
         </div>
       </div>
     </div>
@@ -526,30 +565,30 @@
   <section id="programs">
     <div class="container">
       <div class="section-title">
-        <h2>Programs</h2>
-        <p>Support children and communities directly — sponsor a child, sponsor a school, or fund flagship infrastructure components.</p>
+        <h2 data-i18n="programs.h2">Programs</h2>
+        <p data-i18n="programs.p">Support children and communities directly — sponsor a child, sponsor a school, or fund flagship infrastructure components.</p>
       </div>
 
       <div class="grid cols-3">
         <div class="card">
-          <div class="kicker">Program</div>
-          <h3>Sponsor a Child</h3>
-          <p>Support an orphaned or disadvantaged child in Africa with education, sport, nutrition and mentorship.</p>
-          <div style="margin-top:12px;"><a class="btn green" href="#sponsor-child">Learn more</a></div>
+          <div class="kicker" data-i18n="programs.cardProgram.kicker">Program</div>
+          <h3 data-i18n="programs.child.h3">Sponsor a Child</h3>
+          <p data-i18n="programs.child.p">Support an orphaned or disadvantaged child in Africa with education, sport, nutrition and mentorship.</p>
+          <div style="margin-top:12px;"><a class="btn green" href="#sponsor-child" data-i18n="programs.learnMore">Learn more</a></div>
         </div>
 
         <div class="card">
-          <div class="kicker">Program</div>
-          <h3>Sponsor a School</h3>
-          <p>Transform a school through learning resources, facilities, and sustainable community development.</p>
-          <div style="margin-top:12px;"><a class="btn primary" href="#sponsor-school">Learn more</a></div>
+          <div class="kicker" data-i18n="programs.cardProgram.kicker">Program</div>
+          <h3 data-i18n="programs.school.h3">Sponsor a School</h3>
+          <p data-i18n="programs.school.p">Transform a school through learning resources, facilities, and sustainable community development.</p>
+          <div style="margin-top:12px;"><a class="btn primary" href="#sponsor-school" data-i18n="programs.learnMore">Learn more</a></div>
         </div>
 
         <div class="card">
-          <div class="kicker">Project</div>
-          <h3>Flagship School Infrastructure</h3>
-          <p>Help complete a multi-sport ground and vocational workshops: carpentry, mechanics, plumbing, electrical & computer lab.</p>
-          <div style="margin-top:12px;"><a class="btn" href="#flagship">View project</a></div>
+          <div class="kicker" data-i18n="programs.cardProject.kicker">Project</div>
+          <h3 data-i18n="programs.flagship.h3">Flagship School Infrastructure</h3>
+          <p data-i18n="programs.flagship.p">Help complete a multi-sport ground and vocational workshops: carpentry, mechanics, plumbing, electrical & computer lab.</p>
+          <div style="margin-top:12px;"><a class="btn" href="#flagship" data-i18n="programs.viewProject">View project</a></div>
         </div>
       </div>
     </div>
@@ -559,85 +598,85 @@
   <section id="sponsor-child">
     <div class="container">
       <div class="section-title">
-        <h2>Sponsor a Child</h2>
-        <p>Support an orphaned child or a child from a poor background — by funding education, protection, and development opportunities.</p>
+        <h2 data-i18n="child.h2">Sponsor a Child</h2>
+        <p data-i18n="child.p">Support an orphaned child or a child from a poor background — by funding education, protection, and development opportunities.</p>
       </div>
 
       <div class="split">
         <div class="card">
-          <div class="kicker">What your support provides</div>
-          <h3>Direct child impact</h3>
+          <div class="kicker" data-i18n="child.support.kicker">What your support provides</div>
+          <h3 data-i18n="child.support.h3">Direct child impact</h3>
           <ul>
-            <li>School fees and registration</li>
-            <li>Uniforms and learning materials</li>
-            <li>Sports training and equipment</li>
-            <li>Nutrition support</li>
-            <li>Basic medical care</li>
-            <li>Mentorship & life-skills guidance</li>
+            <li data-i18n="child.support.li1">School fees and registration</li>
+            <li data-i18n="child.support.li2">Uniforms and learning materials</li>
+            <li data-i18n="child.support.li3">Sports training and equipment</li>
+            <li data-i18n="child.support.li4">Nutrition support</li>
+            <li data-i18n="child.support.li5">Basic medical care</li>
+            <li data-i18n="child.support.li6">Mentorship & life-skills guidance</li>
           </ul>
-          <p class="small" style="margin-top:10px;">
+          <p class="small" style="margin-top:10px;" data-i18n="child.support.note">
             Sponsors receive progress updates and an annual impact summary (photos and reporting where available).
           </p>
         </div>
 
         <div class="card">
-          <div class="kicker">Sponsorship options</div>
-          <h3>Choose a level</h3>
+          <div class="kicker" data-i18n="child.options.kicker">Sponsorship options</div>
+          <h3 data-i18n="child.options.h3">Choose a level</h3>
 
           <div class="pricing">
             <div class="price">
-              <b>Basic Sponsor</b>
+              <b data-i18n="child.pricing.basic.title">Basic Sponsor</b>
               <div class="amount">€25</div>
-              <div class="per">per month</div>
+              <div class="per" data-i18n="pricing.perMonth">per month</div>
               <ul>
-                <li>Education contribution</li>
-                <li>Learning materials</li>
-                <li>Annual progress update</li>
+                <li data-i18n="child.pricing.basic.li1">Education contribution</li>
+                <li data-i18n="child.pricing.basic.li2">Learning materials</li>
+                <li data-i18n="child.pricing.basic.li3">Annual progress update</li>
               </ul>
-              <div class="action"><a class="btn green" href="#sponsorship">Sponsor</a></div>
+              <div class="action"><a class="btn green" href="#sponsorship" data-i18n="pricing.sponsorBtn">Sponsor</a></div>
             </div>
 
             <div class="price featured">
-              <b>Full Child Sponsor</b>
+              <b data-i18n="child.pricing.full.title">Full Child Sponsor</b>
               <div class="amount">€50</div>
-              <div class="per">per month</div>
+              <div class="per" data-i18n="pricing.perMonth">per month</div>
               <ul>
-                <li>Full school support</li>
-                <li>Uniforms & books</li>
-                <li>Sports equipment</li>
-                <li>Quarterly updates</li>
+                <li data-i18n="child.pricing.full.li1">Full school support</li>
+                <li data-i18n="child.pricing.full.li2">Uniforms & books</li>
+                <li data-i18n="child.pricing.full.li3">Sports equipment</li>
+                <li data-i18n="child.pricing.full.li4">Quarterly updates</li>
               </ul>
-              <div class="action"><a class="btn green" href="#sponsorship">Sponsor</a></div>
+              <div class="action"><a class="btn green" href="#sponsorship" data-i18n="pricing.sponsorBtn">Sponsor</a></div>
             </div>
 
             <div class="price">
-              <b>Champion Sponsor</b>
+              <b data-i18n="child.pricing.champion.title">Champion Sponsor</b>
               <div class="amount">€100</div>
-              <div class="per">per month</div>
+              <div class="per" data-i18n="pricing.perMonth">per month</div>
               <ul>
-                <li>Education + development support</li>
-                <li>Health & nutrition assistance</li>
-                <li>Bi-annual detailed report</li>
-                <li>Impact certificate</li>
+                <li data-i18n="child.pricing.champion.li1">Education + development support</li>
+                <li data-i18n="child.pricing.champion.li2">Health & nutrition assistance</li>
+                <li data-i18n="child.pricing.champion.li3">Bi-annual detailed report</li>
+                <li data-i18n="child.pricing.champion.li4">Impact certificate</li>
               </ul>
-              <div class="action"><a class="btn green" href="#sponsorship">Sponsor</a></div>
+              <div class="action"><a class="btn green" href="#sponsorship" data-i18n="pricing.sponsorBtn">Sponsor</a></div>
             </div>
 
             <div class="price">
-              <b>Annual Patron</b>
+              <b data-i18n="child.pricing.patron.title">Annual Patron</b>
               <div class="amount">€1,200</div>
-              <div class="per">per year</div>
+              <div class="per" data-i18n="pricing.perYear">per year</div>
               <ul>
-                <li>Full annual scholarship support</li>
-                <li>Named sponsorship option (optional)</li>
-                <li>Recognition on website (optional)</li>
-                <li>Invitation to foundation events</li>
+                <li data-i18n="child.pricing.patron.li1">Full annual scholarship support</li>
+                <li data-i18n="child.pricing.patron.li2">Named sponsorship option (optional)</li>
+                <li data-i18n="child.pricing.patron.li3">Recognition on website (optional)</li>
+                <li data-i18n="child.pricing.patron.li4">Invitation to foundation events</li>
               </ul>
-              <div class="action"><a class="btn green" href="#sponsorship">Sponsor</a></div>
+              <div class="action"><a class="btn green" href="#sponsorship" data-i18n="pricing.sponsorBtn">Sponsor</a></div>
             </div>
           </div>
 
-          <p class="small" style="margin-top:10px;">
+          <p class="small" style="margin-top:10px;" data-i18n="child.paymentsNote">
             Payments can be monthly or annual. Manual bank donations can be arranged on request.
           </p>
         </div>
@@ -649,82 +688,82 @@
   <section id="sponsor-school">
     <div class="container">
       <div class="section-title">
-        <h2>Sponsor a School</h2>
-        <p>Fund education and infrastructure to impact hundreds of children every year.</p>
+        <h2 data-i18n="school.h2">Sponsor a School</h2>
+        <p data-i18n="school.p">Fund education and infrastructure to impact hundreds of children every year.</p>
       </div>
 
       <div class="split">
         <div class="card">
-          <div class="kicker">What sponsors can fund</div>
-          <h3>School development areas</h3>
+          <div class="kicker" data-i18n="school.fund.kicker">What sponsors can fund</div>
+          <h3 data-i18n="school.fund.h3">School development areas</h3>
           <ul>
-            <li>Classroom renovation or construction</li>
-            <li>Sports facilities and equipment</li>
-            <li>Books, computers and learning tools</li>
-            <li>Teacher training and support</li>
-            <li>School feeding programs</li>
-            <li>Water, sanitation and hygiene facilities</li>
+            <li data-i18n="school.fund.li1">Classroom renovation or construction</li>
+            <li data-i18n="school.fund.li2">Sports facilities and equipment</li>
+            <li data-i18n="school.fund.li3">Books, computers and learning tools</li>
+            <li data-i18n="school.fund.li4">Teacher training and support</li>
+            <li data-i18n="school.fund.li5">School feeding programs</li>
+            <li data-i18n="school.fund.li6">Water, sanitation and hygiene facilities</li>
           </ul>
-          <p class="small" style="margin-top:10px;">
+          <p class="small" style="margin-top:10px;" data-i18n="school.csr">
             Corporate and institutional sponsors can receive CSR/ESG-friendly reporting.
           </p>
         </div>
 
         <div class="card">
-          <div class="kicker">Packages</div>
-          <h3>Sponsorship packages</h3>
+          <div class="kicker" data-i18n="school.packages.kicker">Packages</div>
+          <h3 data-i18n="school.packages.h3">Sponsorship packages</h3>
 
           <div class="pricing">
             <div class="price">
-              <b>Community Supporter</b>
+              <b data-i18n="school.pricing.community.title">Community Supporter</b>
               <div class="amount">€2,500</div>
-              <div class="per">per year</div>
+              <div class="per" data-i18n="pricing.perYear">per year</div>
               <ul>
-                <li>Equipment & learning materials</li>
-                <li>Website recognition</li>
-                <li>Annual report</li>
+                <li data-i18n="school.pricing.community.li1">Equipment & learning materials</li>
+                <li data-i18n="school.pricing.community.li2">Website recognition</li>
+                <li data-i18n="school.pricing.community.li3">Annual report</li>
               </ul>
-              <div class="action"><a class="btn primary" href="#sponsorship">Enquire</a></div>
+              <div class="action"><a class="btn primary" href="#sponsorship" data-i18n="pricing.enquireBtn">Enquire</a></div>
             </div>
 
             <div class="price featured">
-              <b>Education Partner</b>
+              <b data-i18n="school.pricing.partner.title">Education Partner</b>
               <div class="amount">€5,000</div>
-              <div class="per">per year</div>
+              <div class="per" data-i18n="pricing.perYear">per year</div>
               <ul>
-                <li>Classroom support</li>
-                <li>Teacher assistance</li>
-                <li>Annual impact report</li>
+                <li data-i18n="school.pricing.partner.li1">Classroom support</li>
+                <li data-i18n="school.pricing.partner.li2">Teacher assistance</li>
+                <li data-i18n="school.pricing.partner.li3">Annual impact report</li>
               </ul>
-              <div class="action"><a class="btn primary" href="#sponsorship">Enquire</a></div>
+              <div class="action"><a class="btn primary" href="#sponsorship" data-i18n="pricing.enquireBtn">Enquire</a></div>
             </div>
 
             <div class="price">
-              <b>Gold School Sponsor</b>
+              <b data-i18n="school.pricing.gold.title">Gold School Sponsor</b>
               <div class="amount">€10,000</div>
-              <div class="per">per year</div>
+              <div class="per" data-i18n="pricing.perYear">per year</div>
               <ul>
-                <li>Major project component</li>
-                <li>Brand visibility (optional)</li>
-                <li>Media & PR support</li>
+                <li data-i18n="school.pricing.gold.li1">Major project component</li>
+                <li data-i18n="school.pricing.gold.li2">Brand visibility (optional)</li>
+                <li data-i18n="school.pricing.gold.li3">Media & PR support</li>
               </ul>
-              <div class="action"><a class="btn primary" href="#sponsorship">Enquire</a></div>
+              <div class="action"><a class="btn primary" href="#sponsorship" data-i18n="pricing.enquireBtn">Enquire</a></div>
             </div>
 
             <div class="price">
-              <b>Strategic Partner</b>
+              <b data-i18n="school.pricing.strategic.title">Strategic Partner</b>
               <div class="amount">€25,000+</div>
-              <div class="per">per year</div>
+              <div class="per" data-i18n="pricing.perYear">per year</div>
               <ul>
-                <li>Full development program</li>
-                <li>Long-term partnership agreement</li>
-                <li>CSR/ESG reporting support</li>
+                <li data-i18n="school.pricing.strategic.li1">Full development program</li>
+                <li data-i18n="school.pricing.strategic.li2">Long-term partnership agreement</li>
+                <li data-i18n="school.pricing.strategic.li3">CSR/ESG reporting support</li>
               </ul>
-              <div class="action"><a class="btn primary" href="#sponsorship">Enquire</a></div>
+              <div class="action"><a class="btn primary" href="#sponsorship" data-i18n="pricing.enquireBtn">Enquire</a></div>
             </div>
           </div>
 
-          <p class="small" style="margin-top:10px;">
+          <p class="small" style="margin-top:10px;" data-i18n="school.tailor">
             We can tailor sponsorship to your priorities: education, sport, health, skills and community development.
           </p>
         </div>
@@ -736,8 +775,8 @@
   <section id="flagship">
     <div class="container">
       <div class="section-title">
-        <h2>Flagship Project: School Infrastructure Completion (Africa)</h2>
-        <p>
+        <h2 data-i18n="flagshipSection.h2">Flagship Project: School Infrastructure Completion (Africa)</h2>
+        <p data-i18n="flagshipSection.p">
           An existing partner school needs funding to complete infrastructure that combines multi-sport development with vocational training:
           carpentry, mechanics, plumbing, electrical engineering and a computer lab.
         </p>
@@ -745,47 +784,47 @@
 
       <div class="grid cols-2">
         <div class="card">
-          <div class="kicker">Components</div>
-          <h3>What we are building</h3>
+          <div class="kicker" data-i18n="flagshipSection.components.kicker">Components</div>
+          <h3 data-i18n="flagshipSection.components.h3">What we are building</h3>
           <ul>
-            <li><b>Multi-sport training ground</b> (football, basketball, volleyball, athletics/fitness)</li>
-            <li><b>Workshops facility</b> for practical skills education</li>
-            <li>Carpentry workshop</li>
-            <li>Mechanical workshop</li>
-            <li>Plumbing workshop</li>
-            <li>Electrical engineering workshop</li>
-            <li>Computer & digital skills lab</li>
+            <li data-i18n="flagshipSection.components.li1"><b>Multi-sport training ground</b> (football, basketball, volleyball, athletics/fitness)</li>
+            <li data-i18n="flagshipSection.components.li2"><b>Workshops facility</b> for practical skills education</li>
+            <li data-i18n="flagshipSection.components.li3">Carpentry workshop</li>
+            <li data-i18n="flagshipSection.components.li4">Mechanical workshop</li>
+            <li data-i18n="flagshipSection.components.li5">Plumbing workshop</li>
+            <li data-i18n="flagshipSection.components.li6">Electrical engineering workshop</li>
+            <li data-i18n="flagshipSection.components.li7">Computer & digital skills lab</li>
           </ul>
-          <p class="small" style="margin-top:10px;">
+          <p class="small" style="margin-top:10px;" data-i18n="flagshipSection.components.note">
             This project is designed as a model campus where students learn, train and graduate with real skills and real opportunity.
           </p>
         </div>
 
         <div class="card">
-          <div class="kicker">Sponsor components</div>
-          <h3>Funding opportunities</h3>
+          <div class="kicker" data-i18n="flagshipSection.sponsor.kicker">Sponsor components</div>
+          <h3 data-i18n="flagshipSection.sponsor.h3">Funding opportunities</h3>
           <ul>
-            <li><b>€5,000</b> — Facility Supporter (tools & basic equipment)</li>
-            <li><b>€10,000</b> — Sponsor a Workshop (choose: carpentry / mechanics / plumbing / electrical / computer lab)</li>
-            <li><b>€20,000</b> — Sponsor the Sports Ground (construction + equipment)</li>
-            <li><b>€50,000+</b> — Strategic Campus Partner (major completion & long-term partnership)</li>
+            <li data-i18n="flagshipSection.sponsor.li1"><b>€5,000</b> — Facility Supporter (tools & basic equipment)</li>
+            <li data-i18n="flagshipSection.sponsor.li2"><b>€10,000</b> — Sponsor a Workshop (choose: carpentry / mechanics / plumbing / electrical / computer lab)</li>
+            <li data-i18n="flagshipSection.sponsor.li3"><b>€20,000</b> — Sponsor the Sports Ground (construction + equipment)</li>
+            <li data-i18n="flagshipSection.sponsor.li4"><b>€50,000+</b> — Strategic Campus Partner (major completion & long-term partnership)</li>
           </ul>
 
           <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
-            <a class="btn primary" href="#sponsorship">Sponsor a component</a>
-            <a class="btn" href="#contact">Request details</a>
+            <a class="btn primary" href="#sponsorship" data-i18n="flagshipSection.sponsor.btn1">Sponsor a component</a>
+            <a class="btn" href="#contact" data-i18n="flagshipSection.sponsor.btn2">Request details</a>
           </div>
 
-          <p class="small" style="margin-top:10px;">
+          <p class="small" style="margin-top:10px;" data-i18n="flagshipSection.sponsor.note">
             Sponsors receive progress updates, photos/videos and a completion report for funded components.
           </p>
         </div>
       </div>
 
       <div class="card" style="margin-top:14px;">
-        <div class="kicker">Transparency</div>
-        <h3>Governance & accountability</h3>
-        <p>
+        <div class="kicker" data-i18n="flagshipSection.transparency.kicker">Transparency</div>
+        <h3 data-i18n="flagshipSection.transparency.h3">Governance & accountability</h3>
+        <p data-i18n="flagshipSection.transparency.p">
           BS Group Foundation works with verified local partners and school leadership. Funds are allocated to agreed components,
           with monitoring, documentation and progress reporting to ensure responsible use and measurable impact.
         </p>
@@ -797,27 +836,27 @@
   <section id="events">
     <div class="container">
       <div class="section-title">
-        <h2>Events</h2>
-        <p>We host fundraising and community events to support our programs and projects.</p>
+        <h2 data-i18n="events.h2">Events</h2>
+        <p data-i18n="events.p">We host fundraising and community events to support our programs and projects.</p>
       </div>
 
       <div class="grid cols-3">
         <div class="card">
-          <div class="kicker">Fundraising</div>
-          <h3>Charity Gala & Dinner</h3>
-          <p>Corporate-friendly event with presentations, pledges and partnerships.</p>
+          <div class="kicker" data-i18n="events.c1.kicker">Fundraising</div>
+          <h3 data-i18n="events.c1.h3">Charity Gala & Dinner</h3>
+          <p data-i18n="events.c1.p">Corporate-friendly event with presentations, pledges and partnerships.</p>
         </div>
 
         <div class="card">
-          <div class="kicker">Sport</div>
-          <h3>Charity Match / Tournament</h3>
-          <p>Community engagement, youth spotlight, and sponsor activations.</p>
+          <div class="kicker" data-i18n="events.c2.kicker">Sport</div>
+          <h3 data-i18n="events.c2.h3">Charity Match / Tournament</h3>
+          <p data-i18n="events.c2.p">Community engagement, youth spotlight, and sponsor activations.</p>
         </div>
 
         <div class="card">
-          <div class="kicker">Community</div>
-          <h3>Skills & Mentorship Day</h3>
-          <p>Workshops, careers guidance and mentorship sessions for youth and families.</p>
+          <div class="kicker" data-i18n="events.c3.kicker">Community</div>
+          <h3 data-i18n="events.c3.h3">Skills & Mentorship Day</h3>
+          <p data-i18n="events.c3.p">Workshops, careers guidance and mentorship sessions for youth and families.</p>
         </div>
       </div>
     </div>
@@ -827,40 +866,39 @@
   <section id="donate">
     <div class="container">
       <div class="section-title">
-        <h2>Donate</h2>
-        <p>
+        <h2 data-i18n="donate.h2">Donate</h2>
+        <p data-i18n="donate.p">
           You can donate toward child sponsorship, school sponsorship, or specific flagship project components.
-          
         </p>
       </div>
 
       <div class="grid cols-3">
         <div class="card">
           <h3 style="color:var(--brand);">€50</h3>
-          <p>Supports learning materials and essential equipment.</p>
+          <p data-i18n="donate.c1.p">Supports learning materials and essential equipment.</p>
           <div style="margin-top:12px;">
-            <a class="btn primary" href="#sponsorship">Donate</a>
+            <a class="btn primary" href="#sponsorship" data-i18n="cta.donate">Donate</a>
           </div>
         </div>
 
         <div class="card">
           <h3 style="color:var(--brand);">€250</h3>
-          <p>Helps fund tools, uniforms, and school resources.</p>
+          <p data-i18n="donate.c2.p">Helps fund tools, uniforms, and school resources.</p>
           <div style="margin-top:12px;">
-            <a class="btn primary" href="#sponsorship">Donate</a>
+            <a class="btn primary" href="#sponsorship" data-i18n="cta.donate">Donate</a>
           </div>
         </div>
 
         <div class="card">
           <h3 style="color:var(--brand);">€1,000+</h3>
-          <p>Funds a measurable project component with reporting.</p>
+          <p data-i18n="donate.c3.p">Funds a measurable project component with reporting.</p>
           <div style="margin-top:12px;">
-            <a class="btn primary" href="#sponsorship">Donate</a>
+            <a class="btn primary" href="#sponsorship" data-i18n="cta.donate">Donate</a>
           </div>
         </div>
       </div>
 
-      <p class="small" style="margin-top:10px;">
+      <p class="small" style="margin-top:10px;" data-i18n="donate.tip">
         Tip: once you have a payment URL, replace the “Donate” buttons with that link.
       </p>
     </div>
@@ -870,79 +908,79 @@
   <section id="sponsorship">
     <div class="container">
       <div class="section-title">
-        <h2>Get Involved</h2>
-        <p>Tell us what you would like to sponsor. </p>
+        <h2 data-i18n="involved.h2">Get Involved</h2>
+        <p data-i18n="involved.p">Tell us what you would like to sponsor.</p>
       </div>
 
       <div class="split">
         <div class="card">
-          <div class="kicker">How it works</div>
-          <h3>Simple & transparent process</h3>
+          <div class="kicker" data-i18n="involved.how.kicker">How it works</div>
+          <h3 data-i18n="involved.how.h3">Simple & transparent process</h3>
           <ul>
-            <li>Choose a program (Child / School / Flagship component)</li>
-            <li>We confirm details and provide documentation</li>
-            <li>Funds are allocated and monitored with updates</li>
-            <li>You receive progress reporting and impact summaries</li>
+            <li data-i18n="involved.how.li1">Choose a program (Child / School / Flagship component)</li>
+            <li data-i18n="involved.how.li2">We confirm details and provide documentation</li>
+            <li data-i18n="involved.how.li3">Funds are allocated and monitored with updates</li>
+            <li data-i18n="involved.how.li4">You receive progress reporting and impact summaries</li>
           </ul>
-          <p class="small" style="margin-top:10px;">
+          <p class="small" style="margin-top:10px;" data-i18n="involved.how.note">
             For corporate or institutional sponsorship, we can provide a partnership letter and CSR/ESG reporting structure.
           </p>
         </div>
 
         <div class="card">
           <div class="kicker"> </div>
-          <h3>Sponsorship interest form</h3>
+          <h3 data-i18n="involved.form.h3">Sponsorship interest form</h3>
 
           <form name="sponsorship-interest" method="POST" data-netlify="true" netlify-honeypot="bot-field">
             <input type="hidden" name="form-name" value="sponsorship-interest" />
             <p style="display:none">
-              <label>Don’t fill this out: <input name="bot-field" /></label>
+              <label data-i18n="forms.honey.label">Don’t fill this out: <input name="bot-field" /></label>
             </p>
 
             <div class="form-row">
               <div>
-                <label for="fullName">Full name</label>
-                <input id="fullName" name="fullName" type="text" placeholder="Your name" required />
+                <label for="fullName" data-i18n="forms.fullName.label">Full name</label>
+                <input id="fullName" name="fullName" type="text" placeholder="Your name" required data-i18n-placeholder="forms.fullName.ph" />
               </div>
               <div>
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email" placeholder="you@email.com" required />
+                <label for="email" data-i18n="forms.email.label">Email</label>
+                <input id="email" name="email" type="email" placeholder="you@email.com" required data-i18n-placeholder="forms.email.ph" />
               </div>
             </div>
 
             <div class="form-row">
               <div>
-                <label for="type">I want to support</label>
+                <label for="type" data-i18n="forms.supportType.label">I want to support</label>
                 <select id="type" name="supportType" required>
-                  <option value="" selected disabled>Select one</option>
-                  <option>Sponsor a Child</option>
-                  <option>Sponsor a School</option>
-                  <option>Flagship Project (Infrastructure)</option>
-                  <option>Health & Wellbeing Program</option>
-                  <option>Women Empowerment Program</option>
-                  <option>Entrepreneurship Program</option>
-                  <option>General Donation</option>
-                  <option>Corporate / Institutional Partnership</option>
+                  <option value="" selected disabled data-i18n="forms.supportType.selectOne">Select one</option>
+                  <option value="child" data-i18n="forms.supportType.child">Sponsor a Child</option>
+                  <option value="school" data-i18n="forms.supportType.school">Sponsor a School</option>
+                  <option value="flagship" data-i18n="forms.supportType.flagship">Flagship Project (Infrastructure)</option>
+                  <option value="health" data-i18n="forms.supportType.health">Health & Wellbeing Program</option>
+                  <option value="women" data-i18n="forms.supportType.women">Women Empowerment Program</option>
+                  <option value="entrepreneurship" data-i18n="forms.supportType.entrepreneurship">Entrepreneurship Program</option>
+                  <option value="general" data-i18n="forms.supportType.general">General Donation</option>
+                  <option value="corporate" data-i18n="forms.supportType.corporate">Corporate / Institutional Partnership</option>
                 </select>
               </div>
               <div>
-                <label for="budget">Budget (optional)</label>
+                <label for="budget" data-i18n="forms.budget.label">Budget (optional)</label>
                 <select id="budget" name="budget">
-                  <option value="" selected>Choose</option>
-                  <option>€25–€100 / month</option>
-                  <option>€250–€1,000</option>
-                  <option>€2,500–€10,000</option>
-                  <option>€10,000–€25,000</option>
-                  <option>€25,000+</option>
+                  <option value="" selected data-i18n="forms.budget.choose">Choose</option>
+                  <option value="25-100-month" data-i18n="forms.budget.b1">€25–€100 / month</option>
+                  <option value="250-1000" data-i18n="forms.budget.b2">€250–€1,000</option>
+                  <option value="2500-10000" data-i18n="forms.budget.b3">€2,500–€10,000</option>
+                  <option value="10000-25000" data-i18n="forms.budget.b4">€10,000–€25,000</option>
+                  <option value="25000-plus" data-i18n="forms.budget.b5">€25,000+</option>
                 </select>
               </div>
             </div>
 
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Tell us what you would like to sponsor and any questions you have." required></textarea>
+            <label for="message" data-i18n="forms.message.label">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us what you would like to sponsor and any questions you have." required data-i18n-placeholder="forms.message.ph"></textarea>
 
-            <button class="btn primary" type="submit">Submit</button>
-            <p class="small">By submitting, you agree we can contact you about sponsorship options and project details.</p>
+            <button class="btn primary" type="submit" data-i18n="forms.submit">Submit</button>
+            <p class="small" data-i18n="forms.consent">By submitting, you agree we can contact you about sponsorship options and project details.</p>
           </form>
         </div>
       </div>
@@ -953,52 +991,50 @@
   <section id="contact">
     <div class="container">
       <div class="section-title">
-        <h2>Contact</h2>
-        <p>Send us a message. </p>
+        <h2 data-i18n="contact.h2">Contact</h2>
+        <p data-i18n="contact.p">Send us a message.</p>
       </div>
 
       <div class="split">
         <div class="card">
-          <div class="kicker">Contact details</div>
-          <h3>Let’s work together</h3>
-          <p class="small">
-            
-          </p>
+          <div class="kicker" data-i18n="contact.details.kicker">Contact details</div>
+          <h3 data-i18n="contact.details.h3">Let’s work together</h3>
+          <p class="small"></p>
 
           <div class="hr"></div>
 
           <p class="small">
-            Send us an email to:
-            <br />• info@bsgroupfoundation.org  or
+            <span data-i18n="contact.details.emailLine">Send us an email to:</span>
+            <br />• info@bsgroupfoundation.org  <span data-i18n="contact.details.or">or</span>
             <br />• partnerships@bsgroupfoundation.org
           </p>
         </div>
 
         <div class="card">
           <div class="kicker"> </div>
-          <h3>Contact form</h3>
+          <h3 data-i18n="contact.form.h3">Contact form</h3>
 
           <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
             <input type="hidden" name="form-name" value="contact" />
             <p style="display:none">
-              <label>Don’t fill this out: <input name="bot-field" /></label>
+              <label data-i18n="forms.honey.label">Don’t fill this out: <input name="bot-field" /></label>
             </p>
 
             <div class="form-row">
               <div>
-                <label for="cname">Full name</label>
-                <input id="cname" name="name" type="text" placeholder="Your name" required />
+                <label for="cname" data-i18n="forms.fullName.label">Full name</label>
+                <input id="cname" name="name" type="text" placeholder="Your name" required data-i18n-placeholder="forms.fullName.ph" />
               </div>
               <div>
-                <label for="cemail">Email</label>
-                <input id="cemail" name="email" type="email" placeholder="you@email.com" required />
+                <label for="cemail" data-i18n="forms.email.label">Email</label>
+                <input id="cemail" name="email" type="email" placeholder="you@email.com" required data-i18n-placeholder="forms.email.ph" />
               </div>
             </div>
 
-            <label for="cmessage">Message</label>
-            <textarea id="cmessage" name="message" placeholder="How can we help?" required></textarea>
+            <label for="cmessage" data-i18n="forms.message.label">Message</label>
+            <textarea id="cmessage" name="message" placeholder="How can we help?" required data-i18n-placeholder="contact.form.messagePh"></textarea>
 
-            <button class="btn primary" type="submit">Send message</button>
+            <button class="btn primary" type="submit" data-i18n="contact.form.send">Send message</button>
           </form>
         </div>
       </div>
@@ -1011,39 +1047,42 @@
       <div class="footer-grid">
         <div>
           <div style="font-weight:950; color:var(--brand);">BS Group Foundation</div>
-          <p class="small" style="margin-top:8px;">
+          <p class="small" style="margin-top:8px;" data-i18n="footer.about">
             Empowering children and communities through education, sport, health, skills development, women empowerment and entrepreneurship —
             building sustainable futures across Africa and emerging regions.
           </p>
           <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
-            <a class="btn green" href="#sponsor-child">Sponsor a Child</a>
-            <a class="btn primary" href="#sponsor-school">Sponsor a School</a>
+            <a class="btn green" href="#sponsor-child" data-i18n="hero.btn.sponsorChild">Sponsor a Child</a>
+            <a class="btn primary" href="#sponsor-school" data-i18n="hero.btn.sponsorSchool">Sponsor a School</a>
           </div>
         </div>
 
         <div class="links">
-          <div class="kicker">Navigate</div>
-          <a href="#about">About</a>
-          <a href="#impact">Impact Areas</a>
-          <a href="#programs">Programs</a>
-          <a href="#flagship">Flagship Project</a>
-          <a href="#events">Events</a>
-          <a href="#contact">Contact</a>
+          <div class="kicker" data-i18n="footer.navigate">Navigate</div>
+          <a href="#about" data-i18n="nav.about">About</a>
+          <a href="#impact" data-i18n="nav.impact">Impact Areas</a>
+          <a href="#programs" data-i18n="nav.programs">Programs</a>
+          <a href="#flagship" data-i18n="nav.flagship">Flagship Project</a>
+          <a href="#events" data-i18n="nav.events">Events</a>
+          <a href="#contact" data-i18n="nav.contact">Contact</a>
         </div>
 
         <div class="links">
-          <div class="kicker">Get involved</div>
-          <a href="#sponsorship">Partnerships</a>
-          <a href="#donate">Donate</a>
-          <a href="#sponsor-child">Sponsor a Child</a>
-          <a href="#sponsor-school">Sponsor a School</a>
+          <div class="kicker" data-i18n="footer.getInvolved">Get involved</div>
+          <a href="#sponsorship" data-i18n="footer.partnerships">Partnerships</a>
+          <a href="#donate" data-i18n="cta.donate">Donate</a>
+          <a href="#sponsor-child" data-i18n="nav.sponsorChild">Sponsor a Child</a>
+          <a href="#sponsor-school" data-i18n="nav.sponsorSchool">Sponsor a School</a>
           <p class="small" style="margin-top:10px;">
-            © <span id="year"></span> BS Group Foundation. All rights reserved.
+            © <span id="year"></span> BS Group Foundation. <span data-i18n="footer.rights">All rights reserved.</span>
           </p>
         </div>
       </div>
     </div>
   </footer>
+
+  <!-- Load translations -->
+  <script src="i18n.js"></script>
 
   <script>
     // Mobile menu toggle
@@ -1064,10 +1103,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
