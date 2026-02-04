@@ -869,6 +869,40 @@
 
       "cta_title": "Vous souhaitez soutenir ce projet phare ?",
       "cta_sub": "Devenez partenaire, parrainez un composant ou financez un besoin prioritaire.",
+
+      /* =======================
+   INDEX — Flagship section
+   ======================= */
+"flagshipSection.h2": "Projet phare : Finalisation des infrastructures scolaires (Afrique)",
+"flagshipSection.p": "Une école partenaire existante a besoin de financements pour finaliser une infrastructure qui combine le développement multi-sports et la formation professionnelle : menuiserie, mécanique, plomberie, électricité et un laboratoire informatique.",
+
+"flagshipSection.components.kicker": "Composants",
+"flagshipSection.components.h3": "Ce que nous construisons",
+"flagshipSection.components.li1": "<b>Terrain d’entraînement multisports</b> (football, basketball, volleyball, athlétisme/fitness)",
+"flagshipSection.components.li2": "<b>Ateliers</b> pour l’apprentissage de compétences pratiques",
+"flagshipSection.components.li3": "Atelier de menuiserie",
+"flagshipSection.components.li4": "Atelier de mécanique",
+"flagshipSection.components.li5": "Atelier de plomberie",
+"flagshipSection.components.li6": "Atelier d’électricité",
+"flagshipSection.components.li7": "Laboratoire informatique & compétences numériques",
+"flagshipSection.components.note": "Ce projet est conçu comme un campus modèle où les élèves apprennent, s’entraînent et obtiennent des compétences réelles menant à de véritables opportunités.",
+
+"flagshipSection.sponsor.kicker": "Financer des composantes",
+"flagshipSection.sponsor.h3": "Opportunités de financement",
+"flagshipSection.sponsor.li1": "<b>5 000 €</b> — Soutien aux installations (outils & équipement de base)",
+"flagshipSection.sponsor.li2": "<b>10 000 €</b> — Parrainer un atelier (menuiserie / mécanique / plomberie / électricité / informatique)",
+"flagshipSection.sponsor.li3": "<b>20 000 €</b> — Parrainer le terrain multisports (construction + équipement)",
+"flagshipSection.sponsor.li4": "<b>50 000 €+</b> — Partenaire stratégique du campus (finalisation majeure & partenariat long terme)",
+"flagshipSection.sponsor.btn1": "Parrainer une composante",
+"flagshipSection.sponsor.btn2": "Demander des détails",
+"flagshipSection.sponsor.note": "Les sponsors reçoivent des mises à jour d’avancement, des photos/vidéos et un rapport de finalisation pour les composantes financées.",
+
+"flagshipSection.transparency.kicker": "Transparence",
+"flagshipSection.transparency.h3": "Gouvernance & redevabilité",
+"flagshipSection.transparency.p": "BS Group Foundation travaille avec des partenaires locaux vérifiés et la direction de l’école. Les fonds sont affectés à des composantes convenues, avec suivi, documentation et reporting d’avancement afin d’assurer une utilisation responsable et un impact mesurable.",
+
+      
+        
     },
 
     // ============================================================
@@ -1279,6 +1313,39 @@
 
       "cta_title": "¿Quieres apoyar este proyecto insignia?",
       "cta_sub": "Asóciate con nosotros, patrocina un componente o financia una prioridad.",
+      /* =======================
+   INDEX — Flagship section
+   ======================= */
+"flagshipSection.h2": "Proyecto insignia: Finalización de infraestructura escolar (África)",
+"flagshipSection.p": "Una escuela socia existente necesita financiación para completar infraestructura que combina el desarrollo multideportivo con la formación profesional: carpintería, mecánica, fontanería, electricidad y un laboratorio informático.",
+
+"flagshipSection.components.kicker": "Componentes",
+"flagshipSection.components.h3": "Lo que estamos construyendo",
+"flagshipSection.components.li1": "<b>Campo de entrenamiento multideportivo</b> (fútbol, baloncesto, voleibol, atletismo/fitness)",
+"flagshipSection.components.li2": "<b>Centro de talleres</b> para formación práctica",
+"flagshipSection.components.li3": "Taller de carpintería",
+"flagshipSection.components.li4": "Taller de mecánica",
+"flagshipSection.components.li5": "Taller de fontanería",
+"flagshipSection.components.li6": "Taller de electricidad",
+"flagshipSection.components.li7": "Laboratorio informático y habilidades digitales",
+"flagshipSection.components.note": "Este proyecto está diseñado como un campus modelo donde los estudiantes aprenden, entrenan y se gradúan con habilidades reales y oportunidades reales.",
+
+"flagshipSection.sponsor.kicker": "Patrocinar componentes",
+"flagshipSection.sponsor.h3": "Oportunidades de financiación",
+"flagshipSection.sponsor.li1": "<b>5.000 €</b> — Apoyo a instalaciones (herramientas y equipo básico)",
+"flagshipSection.sponsor.li2": "<b>10.000 €</b> — Patrocinar un taller (carpintería / mecánica / fontanería / electricidad / informática)",
+"flagshipSection.sponsor.li3": "<b>20.000 €</b> — Patrocinar el campo deportivo (construcción + equipamiento)",
+"flagshipSection.sponsor.li4": "<b>50.000 €+</b> — Socio estratégico del campus (finalización mayor y alianza a largo plazo)",
+"flagshipSection.sponsor.btn1": "Patrocinar un componente",
+"flagshipSection.sponsor.btn2": "Solicitar detalles",
+"flagshipSection.sponsor.note": "Los patrocinadores reciben actualizaciones de progreso, fotos/vídeos y un informe de finalización de los componentes financiados.",
+
+"flagshipSection.transparency.kicker": "Transparencia",
+"flagshipSection.transparency.h3": "Gobernanza y rendición de cuentas",
+"flagshipSection.transparency.p": "BS Group Foundation trabaja con socios locales verificados y la dirección de la escuela. Los fondos se asignan a componentes acordados, con seguimiento, documentación e informes de progreso para garantizar un uso responsable y un impacto medible.",
+
+       
+       
     },
   };
 
