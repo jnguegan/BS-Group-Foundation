@@ -648,6 +648,39 @@ select[name="lang"]{
   }
 }
 
+/* ===== INDEX: Mobile logo + text stack like Flagship (mobile only) ===== */
+@media (max-width: 980px){
+
+  /* Make the brand block stack vertically */
+  .brand{
+    min-width: 0 !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 6px !important;
+  }
+
+  /* Ensure the logo doesn't force a wide row */
+  .brand img,
+  .brandLogo{
+    height: 52px !important;
+    width: auto !important;
+    flex: 0 0 auto !important;
+  }
+
+  /* Let the name + tagline wrap normally (no single-line forcing) */
+  .brand .name,
+  .brand h1,
+  .brandName{
+    white-space: normal !important;
+    line-height: 1.15 !important;
+  }
+
+  .brand .tag,
+  .brand p,
+  .brandTagline{
+    white-space: normal !important;
+  }
+}
     
 
     
@@ -1417,6 +1450,7 @@ select[name="lang"]{
   </script>
 </body>
 </html>
+
 
 
 
