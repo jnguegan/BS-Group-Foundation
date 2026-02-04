@@ -327,20 +327,48 @@
   }
   .mobile-top .langSelect{width:120px}
 
-  /* ===== Mobile header alignment fix (INDEX) ===== */
+  /* ===== MOBILE ONLY CHANGE #1: Logo + text alignment (row) ===== */
   .brand{
-    flex-direction:column;
-    align-items:flex-start;
-    gap:6px;
+    flex-direction:row;
+    align-items:center;
+    gap:10px;
+    min-width:0;              /* allow text to wrap/clip nicely */
   }
-  .brand img{height:48px}
+  .brand img{
+    height:46px;
+    flex:0 0 auto;
+  }
+  .brand > div{min-width:0;}
   .brand .name{
-    font-size:18px;
-    line-height:1.2;
+    font-size:16px;
+    line-height:1.05;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
   }
-  .brand .tag{font-size:12px}
+  .brand .tag{
+    font-size:12px;
+    margin-top:2px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    max-width: 180px;
+  }
+
+  /* ===== MOBILE ONLY CHANGE #2: Make EN/FR/ES visible at a glance ===== */
+  .nav-cta .langSelect{
+    min-width:78px;
+    height:44px;
+    padding:10px 14px;
+    font-weight:900;
+    font-size:14px;
+    line-height:1;
+    color:var(--text);
+    background:#fff;
+  }
 }
 
+/* (everything below remains unchanged) */
     
     /* --- NAVIGATION MENU FIX --- */
     .navlinks {
@@ -1411,19 +1439,3 @@ select[name="lang"]{
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
