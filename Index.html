@@ -526,7 +526,6 @@
 .brand img{
   height: 72px;
 }
-<style>
 /* ===== Mobile-only Nav Fix (do not affect desktop) ===== */
 @media (max-width: 980px) {
 
@@ -673,6 +672,68 @@ select[name="lang"]{
     pointer-events: none;
     font-size: 14px;
     color: #0b1b33;
+  }
+}
+/* =======================================================
+   MOBILE ONLY: stop language dropdown covering the logo
+   (Index.html only — does not touch desktop)
+   ======================================================= */
+@media (max-width: 980px){
+
+  /* Allow header rows */
+  .nav-inner{
+    flex-wrap: wrap !important;
+    align-items: center !important;
+  }
+
+  /* Row 1: Brand takes full width */
+  .brand{
+    flex: 1 1 100% !important;
+    min-width: 0 !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 10px !important;
+  }
+
+  .brand img{
+    height: 46px !important;
+    flex: 0 0 auto !important;
+  }
+
+  .brand > div{min-width:0 !important;}
+
+  .brand .name{
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    font-size: 16px !important;
+    line-height: 1.05 !important;
+  }
+
+  .brand .tag{
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    max-width: 220px !important;
+  }
+
+  /* Row 2: Controls (language + buttons + hamburger) */
+  .nav-cta{
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    justify-content: flex-end !important;
+    gap: 8px !important;
+    padding-top: 8px !important;
+    flex-wrap: nowrap !important;
+  }
+
+  /* Make EN/FR/ES visible */
+  .nav-cta .langSelect{
+    width: 78px !important;
+    height: 44px !important;
+    font-weight: 900 !important;
+    font-size: 14px !important;
+    padding: 10px 12px !important;
   }
 }
    
@@ -1439,3 +1500,4 @@ select[name="lang"]{
   </script>
 </body>
 </html>
+
