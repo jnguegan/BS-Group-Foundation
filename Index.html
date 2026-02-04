@@ -647,6 +647,32 @@ select[name="lang"]{
     color: #0b1b33;
   }
 }
+/* ===== INDEX: force brand to behave like Flagship on mobile ONLY ===== */
+@media (max-width: 980px){
+
+  /* Match Flagship behaviour: brand becomes a clean vertical stack */
+  .nav .nav-inner .brand{
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 6px !important;
+    min-width: 0 !important;
+  }
+
+  .nav .nav-inner .brand img{
+    height: 72px !important;
+    width: auto !important;
+  }
+
+  .nav .nav-inner .brand > div{
+    width: 100% !important;
+  }
+
+  .nav .nav-inner .brand .name,
+  .nav .nav-inner .brand .tag{
+    white-space: normal !important;
+  }
+}
    
     
   </style>
@@ -1411,6 +1437,7 @@ select[name="lang"]{
   </script>
 </body>
 </html>
+
 
 
 
