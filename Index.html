@@ -598,77 +598,62 @@
     </div>
   </div>
 
-  <!-- HERO -->
-  <header class="hero" id="top">
-    <div class="container">
-      <div class="hero-grid">
-        <div class="hero-card">
-          <span class="badge" data-i18n="hero.badge">🌍 Africa-focused programs • Transparent reporting • Sustainable impact</span>
-          <h1 data-i18n="hero.h1">Empowering Children & Communities Through Opportunity</h1>
-          <p class="lead" data-i18n="hero.lead">
-            BS Group Foundation supports vulnerable children, schools and communities through education access, sport development,
-            healthcare, vocational skills, women empowerment and entrepreneurship — creating sustainable pathways to dignity,
-            employment and long-term success.
-          </p>
+<header class="nav">
+  <div class="container nav-inner">
 
-          <div class="hero-actions">
-            <a class="btn green" href="#sponsor-child" data-i18n="hero.btn.sponsorChild">Sponsor a Child</a>
-            <a class="btn primary" href="#sponsor-school" data-i18n="hero.btn.sponsorSchool">Sponsor a School</a>
-            <a href="flagship.html" class="btn" data-i18n="hero.btn.supportFlagship">Support Flagship Project</a>
-          </div>
-
-          <div class="stats">
-            <div class="stat">
-              <b data-i18n="stats.education.title">Education Access</b>
-              <span data-i18n="stats.education.desc">Fees, materials, mentoring & school support</span>
-            </div>
-            <div class="stat">
-              <b data-i18n="stats.sport.title">Sport & Youth Development</b>
-              <span data-i18n="stats.sport.desc">Discipline, teamwork and opportunity</span>
-            </div>
-            <div class="stat">
-              <b data-i18n="stats.skills.title">Skills & Employability</b>
-              <span data-i18n="stats.skills.desc">Workshops for practical trades & digital skills</span>
-            </div>
-            <div class="stat">
-              <b data-i18n="stats.health.title">Health & Wellbeing</b>
-              <span data-i18n="stats.health.desc">Nutrition, hygiene and community care</span>
-            </div>
-          </div>
-
-          <p class="small" style="margin-top:14px;">
-            <span data-i18n="hero.corporateLine">For corporate/institutional partnerships, visit</span>
-            <a href="#sponsorship" style="color:var(--brand); text-decoration:underline;" data-i18n="hero.corporateLink">Get Involved</a>.
-          </p>
-        </div>
-
-        <aside class="hero-card">
-          <div class="kicker" data-i18n="flagship.kicker">Flagship Focus</div>
-          <h3 style="margin:8px 0 8px; color:#07162d;" data-i18n="flagship.title">School Infrastructure Completion (Africa)</h3>
-          <p style="margin:0; color:rgba(11,27,51,.82);" data-i18n="flagship.intro">
-            We are supporting an existing partner school to complete critical infrastructure:
-          </p>
-
-          <div class="hr"></div>
-
-          <ul style="margin:0; padding-left:18px; color:rgba(11,27,51,.82);">
-            <li data-i18n="flagship.li1"><b>Multi-sport training ground</b> (football, basketball, volleyball, athletics/fitness)</li>
-            <li data-i18n="flagship.li2"><b>Workshops facility</b> for skills training</li>
-            <li data-i18n="flagship.li3">Carpentry • Mechanics • Plumbing • Electrical • Computer lab</li>
-          </ul>
-
-          <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
-            <a href="flagship.html" class="btn primary" data-i18n="flagship.btn.view">View Project</a>
-            <a class="btn" href="#donate" data-i18n="cta.donate">Donate</a>
-          </div>
-
-          <p class="small" style="margin-top:12px;" data-i18n="flagship.note">
-            Sponsors receive progress updates, photos/videos, and clear reporting for funded components.
-          </p>
-        </aside>
+    <a class="brand" href="Index.html">
+      <img src="Logo.png" alt="BS Group Foundation Logo" />
+      <div class="brandText">
+        <div class="brandName">BS Group Foundation</div>
+        <div class="brandTag">Education • Sport • Health • Skills • Opportunity</div>
       </div>
+    </a>
+
+    <!-- Desktop menu -->
+    <nav class="navlinks" aria-label="Primary">
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#impact" data-i18n="nav.impact">Impact Areas</a>
+      <a href="#programs" data-i18n="nav.programs">Programs</a>
+      <a href="#sponsor-child" data-i18n="nav.child">Sponsor a Child</a>
+      <a href="#sponsor-school" data-i18n="nav.school">Sponsor a School</a>
+      <a href="flagship.html" data-i18n="nav.flagship">Flagship Project</a>
+      <a href="#events" data-i18n="nav.events">Events</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+
+    <!-- Right side actions -->
+    <div class="nav-actions">
+      <!-- language switcher (keep yours here) -->
+
+      <a class="btn ghost" href="#get-involved" data-i18n="btn.getInvolved">Get Involved</a>
+      <a class="btn primary" href="#donate" data-i18n="btn.donate">Donate</a>
+
+      <!-- Hamburger (mobile only) -->
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" type="button">
+        ☰
+      </button>
     </div>
-  </header>
+
+  </div>
+
+  <!-- Mobile menu panel -->
+  <div class="mobileMenu" id="mobileMenu" aria-label="Mobile menu">
+    <a href="#about" data-i18n="nav.about">About</a>
+    <a href="#impact" data-i18n="nav.impact">Impact Areas</a>
+    <a href="#programs" data-i18n="nav.programs">Programs</a>
+    <a href="#sponsor-child" data-i18n="nav.child">Sponsor a Child</a>
+    <a href="#sponsor-school" data-i18n="nav.school">Sponsor a School</a>
+    <a href="flagship.html" data-i18n="nav.flagship">Flagship Project</a>
+    <a href="#events" data-i18n="nav.events">Events</a>
+    <a href="#contact" data-i18n="nav.contact">Contact</a>
+
+    <div class="mobileMenuCtas">
+      <a class="btn ghost" href="#get-involved" data-i18n="btn.getInvolved">Get Involved</a>
+      <a class="btn primary" href="#donate" data-i18n="btn.donate">Donate</a>
+    </div>
+  </div>
+</header>
+
 
   <!-- ABOUT -->
   <section id="about">
@@ -1295,6 +1280,7 @@
   </script>
 </body>
 </html>
+
 
 
 
