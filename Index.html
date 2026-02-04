@@ -736,7 +736,81 @@ select[name="lang"]{
     padding: 10px 12px !important;
   }
 }
-   
+ /* =========================================================
+   MOBILE ONLY: Header layout + Section title stacking
+   (does NOT touch desktop)
+   ========================================================= */
+@media (max-width: 980px){
+
+  /* 1) Header: prevent CTA row from covering/competing with the brand */
+  .nav-inner{
+    flex-wrap: wrap !important;
+    align-items: flex-start !important;
+  }
+
+  /* Brand takes full width on first row */
+  .brand{
+    flex: 1 1 100% !important;
+    min-width: 0 !important;
+    flex-direction: row !important;      /* logo + text side-by-side */
+    align-items: center !important;
+    gap: 10px !important;
+  }
+
+  .brand img{ height: 46px !important; }
+
+  /* Keep brand text from wrapping too aggressively */
+  .brand .name{
+    font-size: 18px !important;
+    line-height: 1.15 !important;
+    white-space: nowrap !important;
+  }
+  .brand .tag{
+    font-size: 12px !important;
+    line-height: 1.2 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    max-width: 240px !important;
+  }
+
+  /* CTA row goes on second row and aligns nicely */
+  .nav-cta{
+    flex: 1 1 100% !important;
+    justify-content: flex-end !important;
+    gap: 8px !important;
+    padding-top: 8px !important;
+    flex-wrap: nowrap !important;
+  }
+
+  /* Make sure EN/FR/ES is visible in the dropdown */
+  .langSelect{
+    min-width: 74px !important;
+    height: 44px !important;
+    padding: 10px 14px !important;
+    font-weight: 900 !important;
+  }
+
+  /* Buttons slightly tighter so they don’t collide */
+  .nav-cta .btn{
+    padding: 10px 12px !important;
+    font-size: 14px !important;
+  }
+
+  /* 2) Section titles: stop “Impact / Areas” split */
+  .section-title{
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    gap: 8px !important;
+  }
+  .section-title h2,
+  .section-title p{
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+  
     
   </style>
 
@@ -1500,4 +1574,5 @@ select[name="lang"]{
   </script>
 </body>
 </html>
+
 
