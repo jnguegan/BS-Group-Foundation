@@ -391,19 +391,11 @@
       // INDEX — FOOTER
       // ------------------------------------------------------------
       "footer.lead":
-       "Empowering children and communities through education, sport, health, skills development, women empowerment and entrepreneurship — building sustainable futures across Africa and emerging regions.",
+        "Empowering children and communities through education, sport, health, skills development, women empowerment and entrepreneurship — building sustainable futures across Africa and emerging regions.",
       "footer.navigate": "Navigate",
       "footer.getInvolved": "Get involved",
       "footer.partnerships": "Partnerships",
       "footer.rights": "All rights reserved.",
-      "footer.legal_title": "Legal",
-      "footer.legal_terms": "Terms of Use",
-      "footer.legal_privacy": "Privacy Policy",   
-      "footer.legal_cookies": "Cookie Policy",
-      "footer.legal_disclaimer": "Legal Disclaimer",
-      "footer.legal_transparency": "Transparency"
-},
-       
 
       // ------------------------------------------------------------
       // FLAGSHIP PAGE (your existing keys)
@@ -466,10 +458,8 @@
       "serves_2_li3": "Reduced dropout rates and youth unemployment",
 
       "cta_title": "Want to support this flagship project?",
-      "cta_sub": "Partner with us, sponsor a component, or fund a priority need."
+      "cta_sub": "Partner with us, sponsor a component, or fund a priority need.",
     },
-   ,
-     
 
      
     // ============================================================
@@ -819,12 +809,6 @@
       "footer.getInvolved": "S’impliquer",
       "footer.partnerships": "Partenariats",
       "footer.rights": "Tous droits réservés.",
-     "footer.legal_title": "Juridique",
-      "footer.legal_terms": "Conditions d'utilisation",
-      "footer.legal_privacy": "Politique de confidentialité",
-      "footer.legal_cookies": "Politique de cookies",
-      "footer.legal_disclaimer": "Avertissement légal",
-      "footer.legal_transparency": "Transparence",
 
       // FLAGSHIP PAGE KEYS (already included in your current file)
       "flagship_badge": "Cameroun • Région de l’Adamaoua • Primaire & Secondaire",
@@ -916,12 +900,11 @@
 
 "flagshipSection.transparency.kicker": "Transparence",
 "flagshipSection.transparency.h3": "Gouvernance & redevabilité",
-"flagshipSection.transparency.p": "BS Group Foundation travaille avec des partenaires locaux vérifiés et la direction de l’école. Les fonds sont affectés à des composantes convenues, avec suivi, documentation et reporting d’avancement afin d’assurer une utilisation responsable et un impact mesurable."
+"flagshipSection.transparency.p": "BS Group Foundation travaille avec des partenaires locaux vérifiés et la direction de l’école. Les fonds sont affectés à des composantes convenues, avec suivi, documentation et reporting d’avancement afin d’assurer une utilisation responsable et un impact mesurable.",
 
-   },
-}     
-     
-     
+      
+        
+    },
 
     // ============================================================
     // SPANISH
@@ -1270,12 +1253,6 @@
       "footer.getInvolved": "Participar",
       "footer.partnerships": "Alianzas",
       "footer.rights": "Todos los derechos reservados.",
-      "footer.legal_title": "Juridique",
-      "footer.legal_terms": "Conditions d'utilisation",
-      "footer.legal_privacy": "Politique de confidentialité",
-      "footer.legal_cookies": "Politique de cookies",
-      "footer.legal_disclaimer": "Avertissement légal",
-      "footer.legal_transparency": "Transparence",
 
       // FLAGSHIP PAGE KEYS
       "flagship_badge": "Camerún • Región de Adamaoua • Primaria y Secundaria",
@@ -1367,8 +1344,10 @@
 "flagshipSection.transparency.kicker": "Transparencia",
 "flagshipSection.transparency.h3": "Gobernanza y rendición de cuentas",
 "flagshipSection.transparency.p": "BS Group Foundation trabaja con socios locales verificados y la dirección de la escuela. Los fondos se asignan a componentes acordados, con seguimiento, documentación e informes de progreso para garantizar un uso responsable y un impacto medible.",
+
        
-     
+       
+    },
   };
 
   function getSavedLang() {
