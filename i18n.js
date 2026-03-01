@@ -911,10 +911,21 @@
 "flagshipSection.transparency.kicker": "Transparence",
 "flagshipSection.transparency.h3": "Gouvernance & redevabilité",
 "flagshipSection.transparency.p": "BS Group Foundation travaille avec des partenaires locaux vérifiés et la direction de l’école. Les fonds sont affectés à des composantes convenues, avec suivi, documentation et reporting d’avancement afin d’assurer une utilisation responsable et un impact mesurable.",
-
-      
+  
         
     },
+footer: {
+  legal: {
+    title: "Juridique",
+    terms: "Conditions d'utilisation",
+    privacy: "Politique de confidentialité",
+    cookies: "Politique de cookies",
+    disclaimer: "Avertissement légal",
+    transparency: "Transparence"
+  }
+},
+     
+     
 
     // ============================================================
     // SPANISH
@@ -1354,10 +1365,22 @@
 "flagshipSection.transparency.kicker": "Transparencia",
 "flagshipSection.transparency.h3": "Gobernanza y rendición de cuentas",
 "flagshipSection.transparency.p": "BS Group Foundation trabaja con socios locales verificados y la dirección de la escuela. Los fondos se asignan a componentes acordados, con seguimiento, documentación e informes de progreso para garantizar un uso responsable y un impacto medible.",
-
-       
        
     },
+footer: {
+  legal: {
+    title: "Legal",
+    terms: "Términos de uso",
+    privacy: "Política de privacidad",
+    cookies: "Política de cookies",
+    disclaimer: "Aviso legal",
+    transparency: "Transparencia"
+  }
+},
+
+     
+
+     
   };
 
   function getSavedLang() {
