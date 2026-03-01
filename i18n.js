@@ -1269,6 +1269,12 @@
       "footer.getInvolved": "Participar",
       "footer.partnerships": "Alianzas",
       "footer.rights": "Todos los derechos reservados.",
+      "footer.legalTitle": "Legal",
+      "footer.legalTerms": "Términos de uso",
+      "footer.legalPrivacy": "Política de privacidad",
+      "footer.legalCookies": "Política de cookies",
+      "footer.legalDisclaimer": "Aviso legal",
+      "footer.legalTransparency": "Transparencia",
 
       // FLAGSHIP PAGE KEYS
       "flagship_badge": "Camerún • Región de Adamaoua • Primaria y Secundaria",
@@ -1361,14 +1367,6 @@
 "flagshipSection.transparency.h3": "Gobernanza y rendición de cuentas",
 "flagshipSection.transparency.p": "BS Group Foundation trabaja con socios locales verificados y la dirección de la escuela. Los fondos se asignan a componentes acordados, con seguimiento, documentación e informes de progreso para garantizar un uso responsable y un impacto medible.",
        
-   "footer.legal.title": "Legal",
-  "footer.legal.terms": "Términos de uso",
-  "footer.legal.privacy": "Política de privacidad",
-  "footer.legal.cookies": "Política de cookies",
-  "footer.legal.disclaimer": "Aviso legal",
-  "footer.legal.transparency": "Transparencia"
-
-}
      
   };
 
