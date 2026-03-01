@@ -396,6 +396,7 @@
       "footer.getInvolved": "Get involved",
       "footer.partnerships": "Partnerships",
       "footer.rights": "All rights reserved.",
+       
 
       // ------------------------------------------------------------
       // FLAGSHIP PAGE (your existing keys)
@@ -819,6 +820,12 @@
       "footer.getInvolved": "S’impliquer",
       "footer.partnerships": "Partenariats",
       "footer.rights": "Tous droits réservés.",
+       "footer.legal.title": "Juridique",
+      "footer.legal.terms": "Conditions d'utilisation",
+      "footer.legal.privacy": "Politique de confidentialité",
+      "footer.legal.cookies": "Politique de cookies",
+      "footer.legal.disclaimer": "Avertissement légal",
+      "footer.legal.transparency": "Transparence",
 
       // FLAGSHIP PAGE KEYS (already included in your current file)
       "flagship_badge": "Cameroun • Région de l’Adamaoua • Primaire & Secondaire",
@@ -910,17 +917,10 @@
 
 "flagshipSection.transparency.kicker": "Transparence",
 "flagshipSection.transparency.h3": "Gouvernance & redevabilité",
-"flagshipSection.transparency.p": "BS Group Foundation travaille avec des partenaires locaux vérifiés et la direction de l’école. Les fonds sont affectés à des composantes convenues, avec suivi, documentation et reporting d’avancement afin d’assurer une utilisation responsable et un impact mesurable.",
+"flagshipSection.transparency.p": "BS Group Foundation travaille avec des partenaires locaux vérifiés et la direction de l’école. Les fonds sont affectés à des composantes convenues, avec suivi, documentation et reporting d’avancement afin d’assurer une utilisation responsable et un impact mesurable."
 
-"footer.legal.title": "Juridique",
-"footer.legal.terms": "Conditions d'utilisation",
-"footer.legal.privacy": "Politique de confidentialité",
-"footer.legal.cookies": "Politique de cookies",
-"footer.legal.disclaimer": "Avertissement légal",
-"footer.legal.transparency": "Transparence"
-
-},
-     
+   },
+}     
      
      
 
