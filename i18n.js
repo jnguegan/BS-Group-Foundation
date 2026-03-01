@@ -820,12 +820,12 @@
       "footer.getInvolved": "S’impliquer",
       "footer.partnerships": "Partenariats",
       "footer.rights": "Tous droits réservés.",
-       "footer.legal.title": "Juridique",
-      "footer.legal.terms": "Conditions d'utilisation",
-      "footer.legal.privacy": "Politique de confidentialité",
-      "footer.legal.cookies": "Politique de cookies",
-      "footer.legal.disclaimer": "Avertissement légal",
-      "footer.legal.transparency": "Transparence",
+      "footer.legalTitle": "Juridique",
+      "footer.legalTerms": "Conditions d'utilisation",
+      "footer.legalPrivacy": "Politique de confidentialité",
+      "footer.legalCookies": "Politique de cookies",
+      "footer.legalDisclaimer": "Avertissement légal",
+      "footer.legalTransparency": "Transparence",
 
       // FLAGSHIP PAGE KEYS (already included in your current file)
       "flagship_badge": "Cameroun • Région de l’Adamaoua • Primaire & Secondaire",
