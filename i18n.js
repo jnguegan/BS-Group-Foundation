@@ -396,12 +396,12 @@
       "footer.getInvolved": "Get involved",
       "footer.partnerships": "Partnerships",
       "footer.rights": "All rights reserved.",
-       "footer.legalTitle": "Legal",
-      "footer.legalTerms": "Terms of Use",
-      "footer.legalPrivacy": "Privacy Policy",   
-      "footer.legalCookies": "Cookie Policy",
-      "footer.legalDisclaimer": "Legal Disclaimer",
-      "footer.legalTransparency": "Transparency"
+      "footer.legal_title": "Legal",
+      "footer.legal_terms": "Terms of Use",
+      "footer.legal_privacy": "Privacy Policy",   
+      "footer.legal_cookies": "Cookie Policy",
+      "footer.legal_disclaimer": "Legal Disclaimer",
+      "footer.legal_transparency": "Transparency"
 },
        
 
@@ -819,12 +819,12 @@
       "footer.getInvolved": "S’impliquer",
       "footer.partnerships": "Partenariats",
       "footer.rights": "Tous droits réservés.",
-      "footer.legalTitle": "Juridique",
-      "footer.legalTerms": "Conditions d'utilisation",
-      "footer.legalPrivacy": "Politique de confidentialité",
-      "footer.legalCookies": "Politique de cookies",
-      "footer.legalDisclaimer": "Avertissement légal",
-      "footer.legalTransparency": "Transparence",
+     "footer.legal_title": "Juridique",
+      "footer.legal_terms": "Conditions d'utilisation",
+      "footer.legal_privacy": "Politique de confidentialité",
+      "footer.legal_cookies": "Politique de cookies",
+      "footer.legal_disclaimer": "Avertissement légal",
+      "footer.legal_transparency": "Transparence",
 
       // FLAGSHIP PAGE KEYS (already included in your current file)
       "flagship_badge": "Cameroun • Région de l’Adamaoua • Primaire & Secondaire",
@@ -1270,12 +1270,12 @@
       "footer.getInvolved": "Participar",
       "footer.partnerships": "Alianzas",
       "footer.rights": "Todos los derechos reservados.",
-      "footer.legalTitle": "Legal",
-      "footer.legalTerms": "Términos de uso",
-      "footer.legalPrivacy": "Política de privacidad",
-      "footer.legalCookies": "Política de cookies",
-      "footer.legalDisclaimer": "Aviso legal",
-      "footer.legalTransparency": "Transparencia",
+      "footer.legal_title": "Juridique",
+      "footer.legal_terms": "Conditions d'utilisation",
+      "footer.legal_privacy": "Politique de confidentialité",
+      "footer.legal_cookies": "Politique de cookies",
+      "footer.legal_disclaimer": "Avertissement légal",
+      "footer.legal_transparency": "Transparence",
 
       // FLAGSHIP PAGE KEYS
       "flagship_badge": "Camerún • Región de Adamaoua • Primaria y Secundaria",
