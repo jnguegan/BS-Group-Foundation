@@ -401,8 +401,7 @@
 "footer.privacy": "Privacy Policy",
 "footer.cookies": "Cookie Policy",
 "footer.disclaimer": "Legal Disclaimer",
-"footer.transparency": "Transparency"
-},
+"footer.transparency": "Transparency",
        
 
       // ------------------------------------------------------------
