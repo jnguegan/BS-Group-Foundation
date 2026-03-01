@@ -391,11 +391,18 @@
       // INDEX — FOOTER
       // ------------------------------------------------------------
       "footer.lead":
-        "Empowering children and communities through education, sport, health, skills development, women empowerment and entrepreneurship — building sustainable futures across Africa and emerging regions.",
+       "Empowering children and communities through education, sport, health, skills development, women empowerment and entrepreneurship — building sustainable futures across Africa and emerging regions.",
       "footer.navigate": "Navigate",
       "footer.getInvolved": "Get involved",
       "footer.partnerships": "Partnerships",
       "footer.rights": "All rights reserved.",
+       "footer.legalTitle": "Legal",
+      "footer.legalTerms": "Terms of Use",
+      "footer.legalPrivacy": "Privacy Policy",   
+      "footer.legalCookies": "Cookie Policy",
+      "footer.legalDisclaimer": "Legal Disclaimer",
+      "footer.legalTransparency": "Transparency"
+},
        
 
       // ------------------------------------------------------------
@@ -461,13 +468,7 @@
       "cta_title": "Want to support this flagship project?",
       "cta_sub": "Partner with us, sponsor a component, or fund a priority need."
     },
-    "footer.legalTitle": "Legal",
-"footer.legalTerms": "Terms of Use",
-"footer.legalPrivacy": "Privacy Policy",
-"footer.legalCookies": "Cookie Policy",
-"footer.legalDisclaimer": "Legal Disclaimer",
-"footer.legalTransparency": "Transparency"
-},
+   ,
      
 
      
