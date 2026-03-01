@@ -461,16 +461,14 @@
       "cta_title": "Want to support this flagship project?",
       "cta_sub": "Partner with us, sponsor a component, or fund a priority need."
     },
-     "footer": {
-  "legal": {
-    "title": "Legal",
-    "terms": "Terms of Use",
-    "privacy": "Privacy Policy",
-    "cookies": "Cookie Policy",
-    "disclaimer": "Legal Disclaimer",
-    "transparency": "Transparency"
-  }
+    "footer.legalTitle": "Legal",
+"footer.legalTerms": "Terms of Use",
+"footer.legalPrivacy": "Privacy Policy",
+"footer.legalCookies": "Cookie Policy",
+"footer.legalDisclaimer": "Legal Disclaimer",
+"footer.legalTransparency": "Transparency"
 },
+     
 
      
     // ============================================================
