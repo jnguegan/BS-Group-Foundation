@@ -401,8 +401,7 @@
 "footer.privacy": "Privacy Policy",
 "footer.cookies": "Cookie Policy",
 "footer.disclaimer": "Legal Disclaimer",
-"footer.transparency": "Transparency"
-},
+"footer.transparency": "Transparency",
        
 
       // ------------------------------------------------------------
@@ -825,7 +824,7 @@
 "footer.cookies": "Politique de cookies",
 "footer.disclaimer": "Avertissement légal",
 "footer.transparency": "Transparence",
-
+       
       // FLAGSHIP PAGE KEYS (already included in your current file)
       "flagship_badge": "Cameroun • Région de l’Adamaoua • Primaire & Secondaire",
       "flagship_h1": "Projet phare : Finalisation des infrastructures scolaires",
