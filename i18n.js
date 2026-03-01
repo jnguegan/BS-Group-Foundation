@@ -396,12 +396,12 @@
       "footer.getInvolved": "Get involved",
       "footer.partnerships": "Partnerships",
       "footer.rights": "All rights reserved.",
-      "footer.legal_title": "Legal",
-      "footer.legal_terms": "Terms of Use",
-      "footer.legal_privacy": "Privacy Policy",   
-      "footer.legal_cookies": "Cookie Policy",
-      "footer.legal_disclaimer": "Legal Disclaimer",
-      "footer.legal_transparency": "Transparency"
+      "footer.legal": "Legal",
+"footer.terms": "Terms of Use",
+"footer.privacy": "Privacy Policy",
+"footer.cookies": "Cookie Policy",
+"footer.disclaimer": "Legal Disclaimer",
+"footer.transparency": "Transparency"
 },
        
 
@@ -819,12 +819,12 @@
       "footer.getInvolved": "S’impliquer",
       "footer.partnerships": "Partenariats",
       "footer.rights": "Tous droits réservés.",
-     "footer.legal_title": "Juridique",
-      "footer.legal_terms": "Conditions d'utilisation",
-      "footer.legal_privacy": "Politique de confidentialité",
-      "footer.legal_cookies": "Politique de cookies",
-      "footer.legal_disclaimer": "Avertissement légal",
-      "footer.legal_transparency": "Transparence",
+     "footer.legal": "Juridique",
+"footer.terms": "Conditions d'utilisation",
+"footer.privacy": "Politique de confidentialité",
+"footer.cookies": "Politique de cookies",
+"footer.disclaimer": "Avertissement légal",
+"footer.transparency": "Transparence",
 
       // FLAGSHIP PAGE KEYS (already included in your current file)
       "flagship_badge": "Cameroun • Région de l’Adamaoua • Primaire & Secondaire",
@@ -1270,13 +1270,13 @@
       "footer.getInvolved": "Participar",
       "footer.partnerships": "Alianzas",
       "footer.rights": "Todos los derechos reservados.",
-      "footer.legal_title": "Juridique",
-      "footer.legal_terms": "Conditions d'utilisation",
-      "footer.legal_privacy": "Politique de confidentialité",
-      "footer.legal_cookies": "Politique de cookies",
-      "footer.legal_disclaimer": "Avertissement légal",
-      "footer.legal_transparency": "Transparence",
-
+      "footer.legal": "Legal",
+"footer.terms": "Términos de uso",
+"footer.privacy": "Política de privacidad",
+"footer.cookies": "Política de cookies",
+"footer.disclaimer": "Aviso legal",
+"footer.transparency": "Transparencia",
+           
       // FLAGSHIP PAGE KEYS
       "flagship_badge": "Camerún • Región de Adamaoua • Primaria y Secundaria",
       "flagship_h1": "Proyecto insignia: Finalización de infraestructura escolar",
