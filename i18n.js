@@ -458,8 +458,18 @@
       "serves_2_li3": "Reduced dropout rates and youth unemployment",
 
       "cta_title": "Want to support this flagship project?",
-      "cta_sub": "Partner with us, sponsor a component, or fund a priority need.",
+      "cta_sub": "Partner with us, sponsor a component, or fund a priority need."
     },
+     "footer": {
+  "legal": {
+    "title": "Legal",
+    "terms": "Terms of Use",
+    "privacy": "Privacy Policy",
+    "cookies": "Cookie Policy",
+    "disclaimer": "Legal Disclaimer",
+    "transparency": "Transparency"
+  }
+},
 
      
     // ============================================================
