@@ -467,8 +467,7 @@
       "cta_title": "Want to support this flagship project?",
       "cta_sub": "Partner with us, sponsor a component, or fund a priority need."
     },
-   ,
-     
+        
 
      
     // ============================================================
