@@ -304,10 +304,34 @@
       "events.c2.h3": "Charity Match / Tournament",
       "events.c2.p": "Community engagement, youth spotlight, and sponsor activations.",
 
-      "events.c3.kicker": "Community",
-      "events.c3.h3": "Skills & Mentorship Day",
-      "events.c3.p": "Workshops, careers guidance and mentorship sessions for youth and families.",
+"events.c3.kicker": "Community",
+"events.c3.h3": "Skills & Mentorship Day",
+"events.c3.p": "Workshops, career guidance and mentorship sessions for youth and families.",
+"events.c3.cta": "View Event",
 
+"event.pathway.title": "Pathway to Pro – Paris 2026",
+"event.pathway.subtitle": "Football Careers & Reality",
+"event.pathway.desc": "A premium educational event designed to give young players and their families a clear and honest understanding of football careers.",
+"event.pathway.tagline": "Guiding the next generation of footballers and their families",
+
+"event.pathway.learn.title": "What You Will Learn",
+"event.pathway.learn.1": "The reality of becoming a professional footballer",
+"event.pathway.learn.2": "What clubs are really looking for",
+"event.pathway.learn.3": "The importance of discipline and mindset",
+"event.pathway.learn.4": "Why education remains essential",
+"event.pathway.learn.5": "How to structure a long-term career",
+
+"event.pathway.audience.title": "Who Should Attend",
+"event.pathway.audience.desc": "Young players aged 12–16, parents, and coaches",
+
+"event.pathway.details.location": "Paris",
+"event.pathway.details.date": "Date to be confirmed",
+"event.pathway.details.time": "Daytime event",
+
+"event.pathway.cta.register": "Register Now",
+"event.pathway.cta.flyer": "Download Flyer",
+       
+       
       // ------------------------------------------------------------
       // INDEX — DONATE
       // ------------------------------------------------------------
@@ -459,6 +483,10 @@
 
       "cta_title": "Want to support this flagship project?",
       "cta_sub": "Partner with us, sponsor a component, or fund a priority need.",
+
+
+
+       
     },
 
      
@@ -726,8 +754,31 @@
       "events.c2.p": "Mobilisation communautaire, mise en avant des jeunes et activations sponsors.",
 
       "events.c3.kicker": "Communauté",
-      "events.c3.h3": "Journée compétences & mentorat",
-      "events.c3.p": "Ateliers, orientation et sessions de mentorat pour les jeunes et les familles.",
+"events.c3.h3": "Journée Compétences & Mentorat",
+"events.c3.p": "Ateliers, orientation de carrière et sessions de mentorat pour les jeunes et leurs familles.",
+"events.c3.cta": "Voir l'événement",
+
+"event.pathway.title": "Pathway to Pro – Paris 2026",
+"event.pathway.subtitle": "Carrière & Réalité du Football",
+"event.pathway.desc": "Un événement éducatif premium conçu pour offrir aux jeunes joueurs et à leurs familles une vision claire et honnête du football professionnel.",
+"event.pathway.tagline": "Accompagner la nouvelle génération de footballeurs et leurs familles",
+
+"event.pathway.learn.title": "Ce que vous allez apprendre",
+"event.pathway.learn.1": "La réalité du football professionnel",
+"event.pathway.learn.2": "Ce que les clubs recherchent réellement",
+"event.pathway.learn.3": "L’importance de la discipline et du mental",
+"event.pathway.learn.4": "Pourquoi l’éducation reste essentielle",
+"event.pathway.learn.5": "Comment structurer une carrière à long terme",
+
+"event.pathway.audience.title": "À qui s’adresse cet événement",
+"event.pathway.audience.desc": "Joueurs âgés de 12 à 16 ans, parents et éducateurs",
+
+"event.pathway.details.location": "Paris",
+"event.pathway.details.date": "Date à confirmer",
+"event.pathway.details.time": "Événement en journée",
+
+"event.pathway.cta.register": "S'inscrire",
+"event.pathway.cta.flyer": "Télécharger le flyer",
 
       // DONATE
       "donate.h2": "Faire un don",
@@ -1170,8 +1221,31 @@
       "events.c2.p": "Participación comunitaria, visibilidad juvenil y activaciones de patrocinio.",
 
       "events.c3.kicker": "Comunidad",
-      "events.c3.h3": "Día de habilidades y mentoría",
-      "events.c3.p": "Talleres, orientación y sesiones de mentoría para jóvenes y familias.",
+"events.c3.h3": "Jornada de Habilidades y Mentoría",
+"events.c3.p": "Talleres, orientación profesional y sesiones de mentoría para jóvenes y sus familias.",
+"events.c3.cta": "Ver evento",
+
+"event.pathway.title": "Pathway to Pro – París 2026",
+"event.pathway.subtitle": "Carrera y Realidad del Fútbol",
+"event.pathway.desc": "Un evento educativo premium diseñado para ofrecer a los jóvenes jugadores y sus familias una visión clara y realista del fútbol profesional.",
+"event.pathway.tagline": "Guiando a la próxima generación de futbolistas y sus familias",
+
+"event.pathway.learn.title": "Lo que aprenderás",
+"event.pathway.learn.1": "La realidad de convertirse en futbolista profesional",
+"event.pathway.learn.2": "Qué buscan realmente los clubes",
+"event.pathway.learn.3": "La importancia de la disciplina y la mentalidad",
+"event.pathway.learn.4": "Por qué la educación sigue siendo esencial",
+"event.pathway.learn.5": "Cómo estructurar una carrera a largo plazo",
+
+"event.pathway.audience.title": "A quién va dirigido",
+"event.pathway.audience.desc": "Jugadores de 12 a 16 años, padres y entrenadores",
+
+"event.pathway.details.location": "París",
+"event.pathway.details.date": "Fecha por confirmar",
+"event.pathway.details.time": "Evento diurno",
+
+"event.pathway.cta.register": "Inscribirse",
+"event.pathway.cta.flyer": "Descargar flyer",
 
       // DONATE
       "donate.h2": "Donar",
