@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Pathway to Pro – BS Group Foundation</title>
+
+<link rel="icon" href="favicon.png" type="image/png" />
+
+<style>
+:root{
+  --bg:#f4f7fb;
+  --text:#0b1b33;
+  --muted:#5b6b86;
+  --card:#ffffff;
+  --line:#dfe7f2;
+  --brand:#072c6c;
+  --green:#86b93b;
+  --panel:#051f57;
+}
+
+body{
+  margin:0;
+  font-family:system-ui;
+  background:var(--bg);
+  color:var(--text);
+}
+
+/* NAV */
+.nav{
+  position:sticky; top:0;
+  background:#fff;
+  border-bottom:1px solid var(--line);
+  z-index:10;
+}
+.container{max-width:1100px;margin:auto;padding:0 18px;}
+
+.nav-inner{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:12px 0;
+}
+
+.brand{
+  display:flex;align-items:center;gap:10px;
+}
+.brand img{height:60px;}
+
+.menu a{
+  margin:0 8px;
+  font-weight:600;
+}
+
+/* HERO */
+.hero{
+  padding:30px 0;
+}
+.hero-box{
+  background:linear-gradient(135deg,var(--panel),#0a3a8c);
+  color:#fff;
+  padding:30px;
+  border-radius:20px;
+}
+
+.hero h1{
+  font-size:60px;
+  margin:0;
+  line-height:1;
+}
+
+.hero span{
+  color:var(--green);
+}
+
+.hero p{
+  max-width:600px;
+}
+
+.btn{
+  display:inline-block;
+  padding:12px 16px;
+  border-radius:30px;
+  margin-top:10px;
+  font-weight:700;
+}
+
+.btn.green{background:var(--green);color:#000;}
+.btn.white{background:#fff;color:#000;}
+
+/* SECTION */
+section{padding:30px 0;}
+.card{
+  background:#fff;
+  padding:18px;
+  border-radius:18px;
+  border:1px solid var(--line);
+}
+
+/* FORM */
+input,select{
+  width:100%;
+  padding:12px;
+  border-radius:12px;
+  border:1px solid var(--line);
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+}
+
+@media(max-width:800px){
+  .grid{grid-template-columns:1fr;}
+  .hero h1{font-size:42px;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="nav">
+  <div class="container nav-inner">
+    <div class="brand">
+      <img src="logo.png">
+      <strong>BS Group Foundation</strong>
+    </div>
+    <div class="menu">
+      <a href="index.html">Home</a>
+      <a href="index.html#events">Events</a>
+    </div>
+  </div>
+</div>
+
+<div class="container hero">
+  <div class="hero-box">
+    <h1>Pathway <br>to <span>Pro</span></h1>
+    <p id="hero_text">
+      A premium football education and mentorship event for young players and their families.
+    </p>
+
+    <a href="#register" class="btn green">Register</a>
+    <a href="#flyer" class="btn white">Flyer</a>
+  </div>
+</div>
+
+<div class="container">
+
+<section>
+<h2 id="about_title">About the event</h2>
+<p id="about_text">
+This event provides real guidance about football careers, discipline, and education.
+</p>
+</section>
+
+<section>
+<h2 id="learn_title">What you will learn</h2>
+<div class="grid">
+  <div class="card">Career Reality</div>
+  <div class="card">Discipline</div>
+  <div class="card">Education</div>
+  <div class="card">Mentality</div>
+</div>
+</section>
+
+<section id="flyer">
+<h2>Flyer</h2>
+<img src="images/pathway-to-pro-paris-2026-flyer.png" style="width:100%;max-width:400px;">
+</section>
+
+<section id="register">
+<h2 id="register_title">Registration</h2>
+
+<form action="https://formsubmit.co/YOUR-EMAIL@example.com" method="POST">
+<div class="grid">
+
+<div>
+<label>Parent Name</label>
+<input type="text" name="name" required>
+</div>
+
+<div>
+<label>Email</label>
+<input type="email" name="email" required>
+</div>
+
+<div>
+<label>Phone</label>
+<input type="text" name="phone">
+</div>
+
+<div>
+<label>Number of Children</label>
+<select name="children">
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select>
+</div>
+
+<div>
+<label>Child 1 Age</label>
+<input type="text" name="child1">
+</div>
+
+<div>
+<label>Child 2 Age</label>
+<input type="text" name="child2">
+</div>
+
+</div>
+
+<br>
+<button class="btn green">Submit</button>
+</form>
+</section>
+
+</div>
+
+<script>
+const translations = {
+fr:{
+hero_text:"Un événement éducatif pour les jeunes joueurs et leurs familles.",
+about_title:"À propos",
+about_text:"Cet événement donne une vision claire du football professionnel.",
+learn_title:"Ce que vous apprendrez",
+register_title:"Inscription"
+},
+es:{
+hero_text:"Evento educativo para jóvenes jugadores y familias.",
+about_title:"Sobre el evento",
+about_text:"Este evento explica la realidad del fútbol profesional.",
+learn_title:"Lo que aprenderás",
+register_title:"Registro"
+}
+};
+
+function setLang(lang){
+Object.keys(translations[lang]).forEach(id=>{
+document.getElementById(id).innerText = translations[lang][id];
+});
+}
+</script>
+
+</body>
+</html>
